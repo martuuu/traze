@@ -1,0 +1,87 @@
+{
+  "app": {
+    "[project]/app/_not-found/page": [
+      "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
+      "static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2"
+    ],
+    "[project]/app/dashboard/innovation/page": [
+      "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
+      "static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2"
+    ],
+    "[project]/app/dashboard/lotes/page": [
+      "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
+      "static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2"
+    ],
+    "[project]/app/dashboard/organization/page": [
+      "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
+      "static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2"
+    ],
+    "[project]/app/dashboard/page": [
+      "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
+      "static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2"
+    ],
+    "[project]/app/dashboard/patients/[id]/page": [
+      "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
+      "static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2"
+    ],
+    "[project]/app/dashboard/patients/page": [
+      "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
+      "static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2"
+    ],
+    "[project]/app/dashboard/plants/[id]/page": [
+      "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
+      "static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2"
+    ],
+    "[project]/app/dashboard/plants/page": [
+      "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
+      "static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2"
+    ],
+    "[project]/app/dashboard/profile/page": [
+      "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
+      "static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2"
+    ],
+    "[project]/app/dashboard/reports/page": [
+      "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
+      "static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2"
+    ],
+    "[project]/app/dashboard/scanner/page": [
+      "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
+      "static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2"
+    ],
+    "[project]/app/dashboard/settings/page": [
+      "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
+      "static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2"
+    ],
+    "[project]/app/dashboard/traceability/page": [
+      "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
+      "static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2"
+    ],
+    "[project]/app/login/page": [
+      "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
+      "static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2"
+    ],
+    "[project]/app/page": [
+      "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
+      "static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2"
+    ],
+    "[project]/app/portal/appointments/page": [
+      "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
+      "static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2"
+    ],
+    "[project]/app/portal/dashboard/page": [
+      "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
+      "static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2"
+    ],
+    "[project]/app/portal/documents/page": [
+      "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
+      "static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2"
+    ],
+    "[project]/app/portal/treatment/page": [
+      "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
+      "static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2"
+    ]
+  },
+  "appUsingSizeAdjust": true,
+  "pages": {},
+  "pagesUsingSizeAdjust": false
+}

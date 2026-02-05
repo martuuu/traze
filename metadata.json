@@ -1,0 +1,7 @@
+{
+  "name": "Traze",
+  "description": "Sistema de Trazabilidad REPROCANN para ONGs.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/dashboard/innovation/page": "/dashboard/innovation",
+  "/dashboard/lotes/page": "/dashboard/lotes",
+  "/dashboard/organization/page": "/dashboard/organization",
+  "/dashboard/page": "/dashboard",
+  "/dashboard/patients/[id]/page": "/dashboard/patients/[id]",
+  "/dashboard/patients/page": "/dashboard/patients",
+  "/dashboard/plants/[id]/page": "/dashboard/plants/[id]",
+  "/dashboard/plants/page": "/dashboard/plants",
+  "/dashboard/profile/page": "/dashboard/profile",
+  "/dashboard/reports/page": "/dashboard/reports",
+  "/dashboard/scanner/page": "/dashboard/scanner",
+  "/dashboard/settings/page": "/dashboard/settings",
+  "/dashboard/traceability/page": "/dashboard/traceability",
+  "/login/page": "/login",
+  "/page": "/",
+  "/portal/appointments/page": "/portal/appointments",
+  "/portal/dashboard/page": "/portal/dashboard",
+  "/portal/documents/page": "/portal/documents",
+  "/portal/treatment/page": "/portal/treatment"
+}
