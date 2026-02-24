@@ -26,6 +26,8 @@ const NAV_ITEMS = [
   { icon: Stethoscope, label: 'Consultas Médicas', path: '/portal/appointments' },
 ];
 
+import { Logo } from '@/app/components/ui/logo';
+
 export function PortalSidebar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
@@ -43,7 +45,7 @@ export function PortalSidebar() {
               </button>
               <span className="font-bold text-slate-900">Portal Paciente</span>
           </div>
-          <div className="h-8 w-8 bg-emerald-600 rounded-full flex items-center justify-center text-white font-bold text-xs">
+          <div className="h-8 w-8 bg-pastel-green-600 rounded-full flex items-center justify-center text-white font-bold text-xs shadow-sm">
               JP
           </div>
       </div>
@@ -61,15 +63,10 @@ export function PortalSidebar() {
         isOpen ? "translate-x-0" : "-translate-x-full"
       )}>
         {/* Logo Area (Desktop only) */}
-        <div className="h-24 hidden md:flex items-center px-8 border-b border-slate-50">
-            <Link href="/portal/dashboard" className="flex items-center gap-3 group">
-                <div className="h-10 w-10 bg-gradient-to-br from-teal-500 to-emerald-600 rounded-xl flex items-center justify-center text-white font-black text-xl shadow-lg shadow-teal-500/20 group-hover:scale-105 transition-transform">
-                    P
-                </div>
-                <div>
-                   <span className="text-xl font-black text-slate-900 tracking-tighter block leading-none">TRAZE<span className="text-teal-500">.</span></span>
-                   <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Portal Paciente</span>
-                </div>
+        <div className="h-24 hidden md:flex items-center px-8 border-b border-slate-50 relative overflow-hidden group">
+            <Link href="/portal/dashboard" className="z-10 relative">
+                <Logo size="lg" />
+                <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest block ml-14 -mt-1">Portal Paciente</span>
             </Link>
         </div>
 

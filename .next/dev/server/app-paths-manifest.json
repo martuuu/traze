@@ -1,14 +1,13 @@
 {
   "/dashboard/innovation/page": "app/dashboard/innovation/page.js",
   "/dashboard/lotes/page": "app/dashboard/lotes/page.js",
-  "/dashboard/organization/page": "app/dashboard/organization/page.js",
   "/dashboard/page": "app/dashboard/page.js",
+  "/dashboard/patients/[id]/page": "app/dashboard/patients/[id]/page.js",
   "/dashboard/patients/page": "app/dashboard/patients/page.js",
+  "/dashboard/plants/[id]/page": "app/dashboard/plants/[id]/page.js",
   "/dashboard/plants/page": "app/dashboard/plants/page.js",
-  "/dashboard/profile/page": "app/dashboard/profile/page.js",
   "/dashboard/reports/page": "app/dashboard/reports/page.js",
   "/dashboard/scanner/page": "app/dashboard/scanner/page.js",
-  "/dashboard/settings/page": "app/dashboard/settings/page.js",
   "/dashboard/traceability/page": "app/dashboard/traceability/page.js",
   "/page": "app/page.js"
 }

@@ -1,13 +1,13 @@
 'use client';
 
 import { useParams } from 'next/navigation';
-import { Card, CardContent, CardHeader, CardTitle } from '@/app/components/ui/card';
+import { Card } from '@/app/components/ui/card';
 import { Button } from '@/app/components/ui/button';
 import { Badge } from '@/app/components/ui/badge';
-import { ArrowLeft, Sprout, QrCode, Droplets, Thermometer, FlaskConical, Scale, History, User } from 'lucide-react';
+import { ArrowLeft, Sprout, QrCode, Droplets, Thermometer, FlaskConical, Scale, History, User, Activity, Sparkles, CalendarDays, MapPin } from 'lucide-react';
 import Link from 'next/link';
 import { cn } from '@/app/lib/utils';
-import { GlassCard } from '@/app/components/ui/glass-card';
+import { motion } from 'framer-motion';
 
 // Mock data fetching (simulated)
 const MOCK_PLANT_DETAILS = {
@@ -19,7 +19,8 @@ const MOCK_PLANT_DETAILS = {
     daysInStage: 24,
     totalDays: 85,
     location: 'Sala A - Indoor',
-    assignedPatient: 'Juan Pérez (26550)',
+    assignedPatient: 'Juan Pérez',
+    patientId: '26550',
     health: 'Saludable',
     image: 'https://images.unsplash.com/photo-1603909223429-69bb7101f420?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     metrics: {
@@ -41,164 +42,206 @@ export default function PlantDetailPage() {
     const plant = MOCK_PLANT_DETAILS; // In real app, fetch based on params.id
 
     return (
-        <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
-            {/* Header */}
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div className="space-y-8 animate-in slide-in-from-right duration-500 pb-20 max-w-7xl mx-auto">
+            {/* Header Streamlined */}
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-border/50 pb-6">
                  <div className="flex items-center gap-4">
-                    <Link href="/dashboard/patients">
-                        <Button variant="ghost" size="icon" className="rounded-full hover:bg-slate-100">
-                            <ArrowLeft className="h-5 w-5 text-slate-500" />
+                    <Link href="/dashboard/plants">
+                        <Button variant="ghost" size="icon" className="rounded-full hover:bg-white bg-sand-gold-50/50 border border-sand-gold-200/50 shadow-sm">
+                            <ArrowLeft className="h-5 w-5 text-muted-foreground" />
                         </Button>
                     </Link>
                     <div>
-                        <div className="flex items-center gap-2">
-                             <h1 className="text-3xl font-black text-slate-900 tracking-tight">{plant.tag}</h1>
-                             <Badge className="bg-purple-100 text-purple-700 hover:bg-purple-200 border-purple-200 uppercase">{plant.stage}</Badge>
+                        <div className="flex items-center gap-3">
+                             <h1 className="text-3xl md:text-4xl font-black text-foreground font-title tracking-tight">{plant.tag}</h1>
+                             <Badge className="bg-purple-50 text-purple-700 border-purple-200 uppercase tracking-widest font-bold text-xs bg-white/50 backdrop-blur-sm shadow-sm py-1.5 px-3">
+                                <span className="w-1.5 h-1.5 rounded-full bg-purple-500 mr-2 inline-block animate-pulse" />
+                                {plant.stage}
+                            </Badge>
                         </div>
-                        <p className="text-slate-500 font-medium">{plant.strain} • {plant.location}</p>
+                        <div className="flex items-center gap-3 mt-1.5 text-sm font-medium text-muted-foreground">
+                            <span className="flex items-center gap-1"><Sprout className="w-4 h-4 text-pastel-green-500" /> {plant.strain}</span>
+                            <span className="text-sand-gold-300">•</span>
+                            <span className="flex items-center gap-1"><MapPin className="w-4 h-4 text-sand-gold-500" /> {plant.location}</span>
+                        </div>
                     </div>
                  </div>
-                 <div className="flex gap-2">
-                    <Button variant="outline" className="border-slate-200 text-slate-600">
+                 <div className="flex gap-3">
+                    <Button variant="outline" className="rounded-full bg-white border-sand-gold-200 font-bold shadow-sm hover:text-foreground">
                         <QrCode className="mr-2 h-4 w-4" /> Imprimir Etiqueta
                     </Button>
-                     <Button className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold">
+                     <Button className="rounded-full bg-foreground text-white hover:bg-foreground/90 font-bold shadow-lg shadow-sand-gold-900/10 transition-all hover:-translate-y-0.5">
                         <History className="mr-2 h-4 w-4" /> Registrar Evento
                     </Button>
                  </div>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                {/* Left Column: Visuals & Stats */}
-                <div className="space-y-6">
-                    <div className="rounded-3xl overflow-hidden shadow-lg border border-slate-100 relative group">
-                        <div className="aspect-[4/5] relative">
-                             {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src={plant.image} alt={plant.strain} className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-                            <div className="absolute bottom-6 left-6 text-white">
-                                <p className="text-sm font-bold opacity-80 mb-1">Paciente Asignado</p>
-                                <div className="flex items-center gap-2 font-bold text-lg">
-                                    <User size={20} className="text-emerald-400" />
-                                    {plant.assignedPatient}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <Card className="border-slate-100">
-                        <CardHeader>
-                            <CardTitle className="text-sm font-bold text-slate-500 uppercase tracking-widest">Estado Vital</CardTitle>
-                        </CardHeader>
-                        <CardContent className="grid grid-cols-2 gap-4">
-                             <div className="p-3 bg-blue-50 rounded-xl border border-blue-100">
-                                 <div className="flex items-center gap-2 mb-1">
-                                     <Droplets size={16} className="text-blue-500" />
-                                     <span className="text-xs font-bold text-blue-700">Humedad</span>
-                                 </div>
-                                 <span className="text-xl font-black text-slate-900">{plant.metrics.humidity}</span>
-                             </div>
-                             <div className="p-3 bg-amber-50 rounded-xl border border-amber-100">
-                                 <div className="flex items-center gap-2 mb-1">
-                                     <Thermometer size={16} className="text-amber-500" />
-                                     <span className="text-xs font-bold text-amber-700">Temp</span>
-                                 </div>
-                                 <span className="text-xl font-black text-slate-900">{plant.metrics.temp}</span>
-                             </div>
-                             <div className="p-3 bg-purple-50 rounded-xl border border-purple-100">
-                                 <div className="flex items-center gap-2 mb-1">
-                                     <FlaskConical size={16} className="text-purple-500" />
-                                     <span className="text-xs font-bold text-purple-700">EC</span>
-                                 </div>
-                                 <span className="text-xl font-black text-slate-900">{plant.metrics.ec}</span>
-                             </div>
-                             <div className="p-3 bg-emerald-50 rounded-xl border border-emerald-100">
-                                 <div className="flex items-center gap-2 mb-1">
-                                     <Scale size={16} className="text-emerald-500" />
-                                     <span className="text-xs font-bold text-emerald-700">Altura</span>
-                                 </div>
-                                 <span className="text-xl font-black text-slate-900">{plant.metrics.height}</span>
-                             </div>
-                        </CardContent>
-                    </Card>
-                </div>
-
-                {/* Right Column: Timeline & Info */}
-                <div className="lg:col-span-2 space-y-6">
-                     {/* Geneaology Card */}
-                     <Card className="border-slate-100">
-                        <CardContent className="p-6 flex items-center justify-between">
-                            <div>
-                                <p className="text-sm text-slate-500 font-medium mb-1">Genética / Procedencia</p>
-                                <h3 className="text-xl font-black text-slate-900">{plant.genetic}</h3>
-                                <p className="text-xs text-slate-400">Banco: Blimburn Seeds • Lote Semillas #2201</p>
-                            </div>
-                            <Sprout size={40} className="text-emerald-200" />
-                        </CardContent>
-                    </Card>
-
-                    {/* Timeline */}
-                    <div className="bg-slate-50 rounded-3xl p-8">
-                        <h3 className="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2">
-                            <History className="h-5 w-5 text-slate-500" /> Historial de Ciclo de Vida
-                        </h3>
+            {/* Bento Grid layout */}
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+                
+                {/* 1. Main Visual Card (Spans 5 cols) */}
+                <motion.div 
+                    className="md:col-span-5 h-[500px]"
+                    initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.1 }}
+                >
+                    <div className="h-full rounded-[2.5rem] overflow-hidden shadow-xl shadow-sand-gold-900/5 border border-sand-gold-200/50 relative group">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src={plant.image} alt={plant.strain} className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700 ease-in-out" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
                         
-                        <div className="relative space-y-8 pl-8 before:absolute before:inset-y-0 before:left-[11px] before:w-0.5 before:bg-slate-200">
-                            {plant.history.map((event, index) => (
-                                <div key={index} className="relative group">
-                                    <div className="absolute left-[-37px] top-1 h-6 w-6 rounded-full border-4 border-white bg-emerald-500 shadow-sm z-10" />
-                                    
-                                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-1">
-                                        <span className="font-bold text-slate-900 text-lg">{event.event}</span>
-                                        <span className="text-xs font-bold text-slate-400 bg-white px-2 py-1 rounded-full border border-slate-100 shadow-sm">{event.date}</span>
+                        <div className="absolute inset-x-0 bottom-0 p-8 text-white">
+                            <p className="text-xs font-bold uppercase tracking-widest text-pastel-green-400 mb-2">Paciente Asignado</p>
+                            <Link href={`/dashboard/patients/${plant.patientId}`}>
+                                <div className="flex items-center justify-between p-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition-colors cursor-pointer group/patient">
+                                    <div className="flex items-center gap-3">
+                                        <div className="h-10 w-10 rounded-full bg-pastel-green-500/20 flex items-center justify-center">
+                                            <User size={20} className="text-pastel-green-300" />
+                                        </div>
+                                        <div>
+                                            <p className="font-bold text-lg leading-none">{plant.assignedPatient}</p>
+                                            <p className="text-xs text-white/60 font-mono mt-1">ID: {plant.patientId}</p>
+                                        </div>
                                     </div>
-                                    <p className="text-sm text-slate-500">Registrado por: <span className="font-medium text-slate-700">{event.user}</span></p>
+                                    <ArrowLeft className="w-5 h-5 opacity-0 group-hover/patient:opacity-100 rotate-180 transition-all -translate-x-4 group-hover/patient:translate-x-0" />
                                 </div>
-                            ))}
+                            </Link>
                         </div>
                     </div>
+                </motion.div>
 
-                    {/* AI Insight */}
-                    <GlassCard className="bg-gradient-to-r from-indigo-500 to-purple-600 border-none text-white">
-                        <div className="flex items-start gap-4">
-                            <div className="p-3 bg-white/20 rounded-xl backdrop-blur-md">
-                                <Bot size={24} className="text-white" />
+                {/* Right Area Content (Spans 7 cols) */}
+                <div className="md:col-span-7 grid gap-6 flex-1 h-[500px]">
+                    
+                    {/* 2. Vital Stats Grid */}
+                    <motion.div 
+                        className="grid grid-cols-2 lg:grid-cols-4 gap-4 h-full"
+                        initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
+                    >
+                        <Card className="border border-sand-gold-200/50 bg-white/40 backdrop-blur-xl rounded-[2rem] p-5 flex flex-col justify-between hover:shadow-md transition-shadow group">
+                            <div className="h-10 w-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-500 group-hover:scale-110 transition-transform">
+                                <Droplets size={20} />
                             </div>
                             <div>
-                                <h4 className="font-bold text-lg mb-2">Análisis Predictivo IA</h4>
-                                <p className="text-indigo-100 text-sm leading-relaxed">
-                                    Basado en la genética <span className="font-bold text-white">Blue Dream</span> y las condiciones actuales, se estima la cosecha óptima para el <span className="font-bold text-white">24 de Octubre</span> (en 18 días). Recomendamos iniciar lavado de raíces el 15 de Octubre.
+                                <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-1">Humedad</p>
+                                <p className="text-3xl font-black text-foreground font-title">{plant.metrics.humidity}</p>
+                            </div>
+                        </Card>
+                        
+                        <Card className="border border-sand-gold-200/50 bg-white/40 backdrop-blur-xl rounded-[2rem] p-5 flex flex-col justify-between hover:shadow-md transition-shadow group">
+                            <div className="h-10 w-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-500 group-hover:scale-110 transition-transform">
+                                <Thermometer size={20} />
+                            </div>
+                            <div>
+                                <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-1">Temp</p>
+                                <p className="text-3xl font-black text-foreground font-title">{plant.metrics.temp}</p>
+                            </div>
+                        </Card>
+
+                        <Card className="border border-sand-gold-200/50 bg-white/40 backdrop-blur-xl rounded-[2rem] p-5 flex flex-col justify-between hover:shadow-md transition-shadow group">
+                            <div className="h-10 w-10 rounded-full bg-purple-50 flex items-center justify-center text-purple-500 group-hover:scale-110 transition-transform">
+                                <FlaskConical size={20} />
+                            </div>
+                            <div>
+                                <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-1">EC</p>
+                                <p className="text-3xl font-black text-foreground font-title">{plant.metrics.ec}</p>
+                            </div>
+                        </Card>
+
+                        <Card className="border border-sand-gold-200/50 bg-white/40 backdrop-blur-xl rounded-[2rem] p-5 flex flex-col justify-between hover:shadow-md transition-shadow group">
+                            <div className="h-10 w-10 rounded-full bg-pastel-green-50 flex items-center justify-center text-pastel-green-500 group-hover:scale-110 transition-transform">
+                                <Scale size={20} />
+                            </div>
+                            <div>
+                                <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-1">Altura</p>
+                                <p className="text-3xl font-black text-foreground font-title">{plant.metrics.height}</p>
+                            </div>
+                        </Card>
+                    </motion.div>
+
+                    {/* 3. Detailed Info Row */}
+                    <motion.div 
+                        className="grid grid-cols-1 lg:grid-cols-2 gap-4 h-full"
+                        initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}
+                    >
+                        {/* Genealogy */}
+                        <Card className="border border-sand-gold-200/50 bg-white rounded-[2rem] p-6 flex flex-col justify-between shadow-sm relative overflow-hidden">
+                            <div className="absolute top-0 right-0 p-6 opacity-5">
+                                <Activity size={100} />
+                            </div>
+                            <div>
+                                <h3 className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-4">Genética Principal</h3>
+                                <p className="text-2xl font-black text-foreground font-title leading-none mb-2">{plant.genetic}</p>
+                                <p className="text-sm font-medium text-muted-foreground">Banco: El Rincón del Cultivador</p>
+                            </div>
+                            <div className="mt-4 pt-4 border-t border-sand-gold-100 flex items-center justify-between">
+                                <div className="flex items-center gap-2">
+                                    <CalendarDays className="w-4 h-4 text-pastel-green-600" />
+                                    <span className="text-xs font-bold">Germinada: {plant.germination}</span>
+                                </div>
+                            </div>
+                        </Card>
+
+                        {/* AI Insight */}
+                        <Card className="border-none bg-foreground text-white rounded-[2rem] p-6 shadow-xl shadow-sand-gold-900/10 relative overflow-hidden group">
+                            <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-purple-500/10 opacity-50 group-hover:opacity-100 transition-opacity duration-500" />
+                            <div className="absolute -top-24 -right-24 w-48 h-48 bg-purple-500/30 blur-[40px] rounded-full" />
+                            
+                            <div className="relative z-10 flex flex-col h-full justify-between">
+                                <div className="flex items-center gap-3 mb-2">
+                                    <div className="bg-white/10 p-2 rounded-xl backdrop-blur-md border border-white/10">
+                                        <Sparkles className="w-5 h-5 text-purple-300" />
+                                    </div>
+                                    <h3 className="font-bold tracking-wide">Asistente Traze</h3>
+                                </div>
+                                <p className="text-sm text-sand-gold-50/90 leading-relaxed font-medium">
+                                    Basado en el fenotipo <span className="font-bold text-white">Blue Dream</span>, estimamos cosecha para el <span className="font-bold text-white text-pastel-green-300">24 de Oct.</span> Recomendamos iniciar lavado de raíces en 48hs.
                                 </p>
                             </div>
-                        </div>
-                    </GlassCard>
+                        </Card>
+                    </motion.div>
                 </div>
             </div>
+
+            {/* 4. Timeline (Full width below bento grid) */}
+            <motion.div 
+                initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}
+            >
+                <Card className="border border-sand-gold-200/50 bg-white rounded-[2.5rem] p-8 md:p-10 shadow-sm mt-8">
+                    <div className="flex items-center justify-between mb-8 border-b border-sand-gold-100 pb-6">
+                        <h3 className="text-2xl font-black text-foreground font-title gap-3 flex items-center">
+                            <History className="text-pastel-green-500 h-6 w-6" /> 
+                            Registro de Actividad
+                        </h3>
+                        <Button variant="outline" className="rounded-full bg-sand-gold-50 border-sand-gold-200 font-bold">
+                            Ver Todo
+                        </Button>
+                    </div>
+
+                    <div className="relative space-y-6 md:space-y-4 before:absolute before:inset-y-0 before:left-[15px] before:w-[2px] before:bg-sand-gold-100 md:pl-0 pl-10 md:before:hidden">
+                        {plant.history.map((event, index) => (
+                            <div key={index} className="relative flex flex-col md:flex-row md:items-center justify-between py-4 group border-b border-sand-gold-50 last:border-0 md:pl-4 hover:bg-sand-gold-50/50 rounded-2xl transition-colors md:px-4">
+                                {/* Mobile Timeline Dot */}
+                                <div className="absolute left-[-30px] top-[26px] h-3 w-3 rounded-full border-2 border-white bg-pastel-green-400 shadow-sm z-10 md:hidden" />
+                                
+                                <div className="flex items-center gap-4 mb-2 md:mb-0">
+                                    <div className="hidden md:flex h-10 w-10 rounded-full bg-white border border-sand-gold-200 items-center justify-center text-pastel-green-600 shadow-sm group-hover:scale-110 transition-transform">
+                                        <Activity size={16} />
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold text-foreground text-lg">{event.event}</h4>
+                                        <p className="text-sm text-muted-foreground font-medium">Registrado por: {event.user}</p>
+                                    </div>
+                                </div>
+                                <div className="flex items-center gap-3">
+                                    <Badge variant="outline" className="bg-white border-sand-gold-200 text-muted-foreground font-bold tracking-wide">
+                                        {event.date}
+                                    </Badge>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </Card>
+            </motion.div>
         </div>
     );
-}
-
-// Icon for the AI Insight
-function Bot({ size, className }: { size?: number, className?: string }) {
-    return (
-        <svg 
-            xmlns="http://www.w3.org/2000/svg" 
-            width={size || 24} 
-            height={size || 24} 
-            viewBox="0 0 24 24" 
-            fill="none" 
-            stroke="currentColor" 
-            strokeWidth="2" 
-            strokeLinecap="round" 
-            strokeLinejoin="round" 
-            className={className}
-        >
-            <path d="M12 8V4H8" />
-            <rect width="16" height="12" x="4" y="8" rx="2" />
-            <path d="M2 14h2" />
-            <path d="M20 14h2" />
-            <path d="M15 13v2" />
-            <path d="M9 13v2" />
-        </svg>
-    )
 }

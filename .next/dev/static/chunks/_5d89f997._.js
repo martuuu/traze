@@ -18,22 +18,22 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$utils$2e$ts__$
 ;
 ;
 ;
-const buttonVariants = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$class$2d$variance$2d$authority$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cva"])("inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50", {
+const buttonVariants = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$class$2d$variance$2d$authority$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cva"])("inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 active:scale-[0.98]", {
     variants: {
         variant: {
-            default: "bg-primary text-primary-foreground hover:bg-primary/90",
-            destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-            outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+            default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-md shadow-primary/20",
+            destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90 shadow-sm",
+            outline: "border border-sand-gold-300 bg-background hover:bg-sand-gold-50 hover:text-foreground",
             secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-            ghost: "hover:bg-accent hover:text-accent-foreground",
+            ghost: "hover:bg-sand-gold-50 hover:text-foreground",
             link: "text-primary underline-offset-4 hover:underline",
-            glass: "bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20"
+            glass: "bg-white/40 backdrop-blur-md border border-sand-gold-200 text-foreground hover:bg-white/60 shadow-sm"
         },
         size: {
-            default: "h-10 px-4 py-2",
-            sm: "h-9 rounded-md px-3",
-            lg: "h-11 rounded-md px-8",
-            icon: "h-10 w-10"
+            default: "h-12 px-6 py-2",
+            sm: "h-9 rounded-full px-4",
+            lg: "h-14 rounded-full px-8 text-base",
+            icon: "h-12 w-12 rounded-full"
         }
     },
     defaultVariants: {
@@ -80,11 +80,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$utils$2e$ts__$
 ;
 function GlassCard({ children, className, ...props }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("relative overflow-hidden rounded-3xl border border-white/20 bg-white/10 backdrop-blur-md shadow-lg", className),
+        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("relative overflow-hidden rounded-[2rem] border border-sand-gold-200/50 bg-white/40 backdrop-blur-xl shadow-xl shadow-sand-gold-900/5", className),
         ...props,
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "absolute inset-0 z-0 bg-gradient-to-br from-white/10 to-transparent opacity-50 pointer-events-none"
+                className: "absolute inset-0 z-0 bg-gradient-to-br from-white/60 to-transparent opacity-50 pointer-events-none mix-blend-overlay"
             }, void 0, false, {
                 fileName: "[project]/app/components/ui/glass-card.tsx",
                 lineNumber: 17,
@@ -154,7 +154,7 @@ function ScannerPage() {
                 className: "mb-6",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                        className: "text-3xl font-black text-slate-900 tracking-tight",
+                        className: "text-3xl font-black text-foreground font-title tracking-tight",
                         children: "Scanner QR"
                     }, void 0, false, {
                         fileName: "[project]/app/dashboard/scanner/page.tsx",
@@ -162,7 +162,7 @@ function ScannerPage() {
                         columnNumber: 18
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "text-slate-500",
+                        className: "text-muted-foreground font-light",
                         children: "Identifique plantas, lotes y productos rápidamente."
                     }, void 0, false, {
                         fileName: "[project]/app/dashboard/scanner/page.tsx",
@@ -187,7 +187,7 @@ function ScannerPage() {
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "h-20 w-20 rounded-full bg-slate-800 flex items-center justify-center mb-6 animate-pulse",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$camera$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Camera$3e$__["Camera"], {
-                                            className: "h-10 w-10 text-slate-400"
+                                            className: "h-10 w-10 text-muted-foreground font-light"
                                         }, void 0, false, {
                                             fileName: "[project]/app/dashboard/scanner/page.tsx",
                                             lineNumber: 36,
@@ -207,7 +207,7 @@ function ScannerPage() {
                                         columnNumber: 29
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-slate-400 mb-8 max-w-sm",
+                                        className: "text-muted-foreground font-light mb-8 max-w-sm",
                                         children: "Habilite el acceso a la cámara para escanear códigos QR de trazabilidad."
                                     }, void 0, false, {
                                         fileName: "[project]/app/dashboard/scanner/page.tsx",
@@ -216,7 +216,7 @@ function ScannerPage() {
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
                                         onClick: handleSimulateScan,
-                                        className: "bg-emerald-600 hover:bg-emerald-500 text-white font-bold h-12 px-8 rounded-full",
+                                        className: "bg-pastel-green-600 hover:bg-pastel-green-500 text-white font-bold h-12 px-8 rounded-full",
                                         children: "Activar Cámara"
                                     }, void 0, false, {
                                         fileName: "[project]/app/dashboard/scanner/page.tsx",
@@ -233,7 +233,7 @@ function ScannerPage() {
                                 className: "absolute inset-0 z-20",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "absolute inset-0 bg-slate-900 animate-pulse"
+                                        className: "absolute inset-0 bg-foreground animate-pulse"
                                     }, void 0, false, {
                                         fileName: "[project]/app/dashboard/scanner/page.tsx",
                                         lineNumber: 52,
@@ -242,38 +242,38 @@ function ScannerPage() {
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "absolute inset-0 flex items-center justify-center",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "w-64 h-64 border-2 border-emerald-500/50 rounded-3xl relative",
+                                            className: "w-64 h-64 border-2 border-pastel-green-500/50 rounded-3xl relative",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "absolute top-0 left-0 w-8 h-8 border-t-4 border-l-4 border-emerald-500 rounded-tl-xl"
+                                                    className: "absolute top-0 left-0 w-8 h-8 border-t-4 border-l-4 border-pastel-green-500 rounded-tl-xl"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/dashboard/scanner/page.tsx",
                                                     lineNumber: 57,
                                                     columnNumber: 38
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "absolute top-0 right-0 w-8 h-8 border-t-4 border-r-4 border-emerald-500 rounded-tr-xl"
+                                                    className: "absolute top-0 right-0 w-8 h-8 border-t-4 border-r-4 border-pastel-green-500 rounded-tr-xl"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/dashboard/scanner/page.tsx",
                                                     lineNumber: 58,
                                                     columnNumber: 38
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "absolute bottom-0 left-0 w-8 h-8 border-b-4 border-l-4 border-emerald-500 rounded-bl-xl"
+                                                    className: "absolute bottom-0 left-0 w-8 h-8 border-b-4 border-l-4 border-pastel-green-500 rounded-bl-xl"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/dashboard/scanner/page.tsx",
                                                     lineNumber: 59,
                                                     columnNumber: 38
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "absolute bottom-0 right-0 w-8 h-8 border-b-4 border-r-4 border-emerald-500 rounded-br-xl"
+                                                    className: "absolute bottom-0 right-0 w-8 h-8 border-b-4 border-r-4 border-pastel-green-500 rounded-br-xl"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/dashboard/scanner/page.tsx",
                                                     lineNumber: 60,
                                                     columnNumber: 38
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "absolute left-0 right-0 h-0.5 bg-emerald-500 shadow-[0_0_20px_rgba(16,185,129,0.5)] animate-[scan_2s_ease-in-out_infinite]"
+                                                    className: "absolute left-0 right-0 h-0.5 bg-pastel-green-500 shadow-[0_0_20px_rgba(16,185,129,0.5)] animate-[scan_2s_ease-in-out_infinite]"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/dashboard/scanner/page.tsx",
                                                     lineNumber: 63,
@@ -293,7 +293,7 @@ function ScannerPage() {
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "absolute bottom-10 left-0 right-0 text-center",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "text-emerald-400 font-mono text-sm animate-pulse",
+                                            className: "text-pastel-green-400 font-mono text-sm animate-pulse",
                                             children: "Buscando código QR..."
                                         }, void 0, false, {
                                             fileName: "[project]/app/dashboard/scanner/page.tsx",
@@ -315,7 +315,7 @@ function ScannerPage() {
                                 className: "absolute inset-0 z-30 bg-black/90 flex flex-col items-center justify-center text-center p-8 animate-in zoom-in-95 duration-300",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "h-24 w-24 rounded-full bg-emerald-500 flex items-center justify-center mb-6 shadow-xl shadow-emerald-500/20",
+                                        className: "h-24 w-24 rounded-full bg-pastel-green-500 flex items-center justify-center mb-6 shadow-xl shadow-pastel-green-500/20",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$check$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__CheckCircle2$3e$__["CheckCircle2"], {
                                             className: "h-12 w-12 text-white"
                                         }, void 0, false, {
@@ -337,7 +337,7 @@ function ScannerPage() {
                                         columnNumber: 30
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-2xl font-mono text-emerald-400 mb-8 tracking-widest bg-emerald-950/50 px-6 py-2 rounded-lg border border-emerald-900",
+                                        className: "text-2xl font-mono text-pastel-green-400 mb-8 tracking-widest bg-pastel-green-950/50 px-6 py-2 rounded-lg border border-pastel-green-900",
                                         children: lastScan
                                     }, void 0, false, {
                                         fileName: "[project]/app/dashboard/scanner/page.tsx",
@@ -350,7 +350,7 @@ function ScannerPage() {
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
                                                 onClick: ()=>setLastScan(null),
                                                 variant: "outline",
-                                                className: "border-slate-700 text-slate-300 hover:bg-slate-800",
+                                                className: "border-slate-700 text-slate-300 hover:bg-foreground/90",
                                                 children: "Cerrar"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/dashboard/scanner/page.tsx",
@@ -358,7 +358,7 @@ function ScannerPage() {
                                                 columnNumber: 34
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
-                                                className: "bg-white text-slate-900 font-bold hover:bg-slate-200",
+                                                className: "bg-white text-foreground font-title font-bold hover:bg-slate-200",
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                                     href: "/dashboard/plants/p1",
                                                     children: "Ver Detalle"
@@ -397,10 +397,10 @@ function ScannerPage() {
                                 className: "bg-white/50 backdrop-blur-sm border-white/60",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                        className: "font-bold text-slate-800 mb-4 flex items-center gap-2",
+                                        className: "font-bold text-foreground font-title mb-4 flex items-center gap-2",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$scan$2d$line$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ScanLine$3e$__["ScanLine"], {
-                                                className: "h-4 w-4 text-slate-500"
+                                                className: "h-4 w-4 text-muted-foreground font-light"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/dashboard/scanner/page.tsx",
                                                 lineNumber: 101,
@@ -420,15 +420,15 @@ function ScannerPage() {
                                             2,
                                             3
                                         ].map((_, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "flex items-center justify-between p-3 bg-white rounded-xl border border-slate-100 shadow-sm",
+                                                className: "flex items-center justify-between p-3 bg-white rounded-xl border border-border shadow-sm",
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "flex items-center gap-3",
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                            className: "h-8 w-8 rounded-lg bg-slate-100 flex items-center justify-center",
+                                                            className: "h-8 w-8 rounded-lg bg-sand-gold-50 flex items-center justify-center",
                                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$qr$2d$code$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__QrCode$3e$__["QrCode"], {
                                                                 size: 16,
-                                                                className: "text-slate-500"
+                                                                className: "text-muted-foreground font-light"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/dashboard/scanner/page.tsx",
                                                                 lineNumber: 109,
@@ -443,7 +443,7 @@ function ScannerPage() {
                                                             className: "text-sm",
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                    className: "font-bold text-slate-700",
+                                                                    className: "font-bold text-foreground font-medium",
                                                                     children: [
                                                                         "TRAZE-P-",
                                                                         100 + i
@@ -454,7 +454,7 @@ function ScannerPage() {
                                                                     columnNumber: 46
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                    className: "text-xs text-slate-400",
+                                                                    className: "text-xs text-muted-foreground font-light",
                                                                     children: [
                                                                         "Hace ",
                                                                         i * 15 + 5,

@@ -8,11 +8,11 @@
       "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
       "static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2"
     ],
-    "[project]/app/dashboard/organization/page": [
+    "[project]/app/dashboard/page": [
       "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
       "static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2"
     ],
-    "[project]/app/dashboard/page": [
+    "[project]/app/dashboard/patients/[id]/page": [
       "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
       "static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2"
     ],
@@ -20,11 +20,11 @@
       "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
       "static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2"
     ],
-    "[project]/app/dashboard/plants/page": [
+    "[project]/app/dashboard/plants/[id]/page": [
       "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
       "static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2"
     ],
-    "[project]/app/dashboard/profile/page": [
+    "[project]/app/dashboard/plants/page": [
       "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
       "static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2"
     ],
@@ -33,10 +33,6 @@
       "static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2"
     ],
     "[project]/app/dashboard/scanner/page": [
-      "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
-      "static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2"
-    ],
-    "[project]/app/dashboard/settings/page": [
       "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
       "static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2"
     ],

@@ -4,65 +4,67 @@
  
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Organic Luxury Light Palette */
+    --background: 40 30% 98%; /* Bone White #FDFBF7 */
+    --foreground: 150 15% 15%; /* Dark Muted Green #212C26 */
  
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 45 40% 96%; /* Faint Gold #F8F3E9 */
+    --card-foreground: 150 15% 15%;
  
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 45 40% 96%;
+    --popover-foreground: 150 15% 15%;
  
-    --primary: 151 65% 39%; /* Emerald 600 */
-    --primary-foreground: 210 40% 98%;
+    --primary: 140 25% 55%; /* Pastel Green #73AC8D */
+    --primary-foreground: 40 30% 98%;
  
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 40 30% 90%; 
+    --secondary-foreground: 150 15% 15%;
  
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 45 20% 90%;
+    --muted-foreground: 150 10% 45%;
  
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 45 30% 90%; /* Faint Gold Accent */
+    --accent-foreground: 150 15% 15%;
  
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
  
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 80%;
-    --ring: 151 65% 39%;
+    --border: 45 40% 90%;
+    --input: 45 40% 90%;
+    --ring: 140 25% 55%;
  
-    --radius: 0.75rem;
+    --radius: 1rem; /* Softer, rounder feel */
   }
  
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Organic Luxury Dark Palette - Deep Olive */
+    --background: 150 15% 10%; /* #151D19 */
+    --foreground: 40 30% 95%; /* #F6F3ED */
  
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 150 15% 12%; 
+    --card-foreground: 40 30% 95%;
  
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 150 15% 12%;
+    --popover-foreground: 40 30% 95%;
  
-    --primary: 151 55% 45%; /* Emerald 500 */
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 140 30% 60%;
+    --primary-foreground: 150 15% 15%;
  
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 150 15% 18%;
+    --secondary-foreground: 40 30% 95%;
  
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 150 15% 18%;
+    --muted-foreground: 150 10% 65%;
  
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 150 15% 18%;
+    --accent-foreground: 40 30% 95%;
  
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 40 30% 95%;
  
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 151 55% 45%;
+    --border: 150 15% 18%;
+    --input: 150 15% 18%;
+    --ring: 140 30% 60%;
   }
 }
  

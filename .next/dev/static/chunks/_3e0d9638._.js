@@ -24,7 +24,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$utils$2e$ts__$
 ;
 const Card = /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["forwardRef"](_c = ({ className, ...props }, ref)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         ref: ref,
-        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("rounded-3xl border bg-card text-card-foreground shadow-sm", className),
+        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("rounded-[2rem] border border-border bg-card text-card-foreground shadow-xl shadow-sand-gold-900/5", className),
         ...props
     }, void 0, false, {
         fileName: "[project]/app/components/ui/card.tsx",
@@ -128,9 +128,9 @@ const badgeVariants = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_m
             secondary: "border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80",
             destructive: "border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80",
             outline: "text-foreground",
-            success: "border-transparent bg-emerald-100 text-emerald-800",
-            warning: "border-transparent bg-amber-100 text-amber-800",
-            error: "border-transparent bg-red-100 text-red-800"
+            success: "border-transparent bg-pastel-green-100 text-pastel-green-800",
+            warning: "border-transparent bg-sand-gold-200 text-sand-gold-900",
+            error: "border-transparent bg-red-50 text-red-800"
         }
     },
     defaultVariants: {
@@ -176,22 +176,22 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$utils$2e$ts__$
 ;
 ;
 ;
-const buttonVariants = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$class$2d$variance$2d$authority$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cva"])("inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50", {
+const buttonVariants = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$class$2d$variance$2d$authority$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cva"])("inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 active:scale-[0.98]", {
     variants: {
         variant: {
-            default: "bg-primary text-primary-foreground hover:bg-primary/90",
-            destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-            outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+            default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-md shadow-primary/20",
+            destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90 shadow-sm",
+            outline: "border border-sand-gold-300 bg-background hover:bg-sand-gold-50 hover:text-foreground",
             secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-            ghost: "hover:bg-accent hover:text-accent-foreground",
+            ghost: "hover:bg-sand-gold-50 hover:text-foreground",
             link: "text-primary underline-offset-4 hover:underline",
-            glass: "bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20"
+            glass: "bg-white/40 backdrop-blur-md border border-sand-gold-200 text-foreground hover:bg-white/60 shadow-sm"
         },
         size: {
-            default: "h-10 px-4 py-2",
-            sm: "h-9 rounded-md px-3",
-            lg: "h-11 rounded-md px-8",
-            icon: "h-10 w-10"
+            default: "h-12 px-6 py-2",
+            sm: "h-9 rounded-full px-4",
+            lg: "h-14 rounded-full px-8 text-base",
+            icon: "h-12 w-12 rounded-full"
         }
     },
     defaultVariants: {
@@ -254,7 +254,7 @@ function InnovationPage() {
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                        className: "text-3xl font-black text-slate-900 tracking-tight",
+                        className: "text-3xl font-black text-foreground font-title tracking-tight",
                         children: "Centro de Innovación & IA"
                     }, void 0, false, {
                         fileName: "[project]/app/dashboard/innovation/page.tsx",
@@ -262,7 +262,7 @@ function InnovationPage() {
                         columnNumber: 18
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "text-slate-500",
+                        className: "text-muted-foreground font-light",
                         children: "Monitoreo de agentes autónomos y automatizaciones activas."
                     }, void 0, false, {
                         fileName: "[project]/app/dashboard/innovation/page.tsx",
@@ -279,7 +279,7 @@ function InnovationPage() {
                 className: "grid grid-cols-1 md:grid-cols-3 gap-6",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Card"], {
-                        className: "bg-slate-900 text-white border-slate-800 relative overflow-hidden",
+                        className: "bg-foreground text-white border-slate-800 relative overflow-hidden",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "absolute top-0 right-0 p-4 opacity-20",
@@ -301,7 +301,7 @@ function InnovationPage() {
                                         className: "flex items-center gap-2 mb-2",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$ui$2f$badge$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Badge"], {
                                             variant: "outline",
-                                            className: "text-emerald-400 border-emerald-400/50 bg-emerald-400/10 animate-pulse",
+                                            className: "text-pastel-green-400 border-pastel-green-400/50 bg-pastel-green-400/10 animate-pulse",
                                             children: "ON LINE"
                                         }, void 0, false, {
                                             fileName: "[project]/app/dashboard/innovation/page.tsx",
@@ -322,7 +322,7 @@ function InnovationPage() {
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardDescription"], {
-                                        className: "text-slate-400",
+                                        className: "text-muted-foreground font-light",
                                         children: "Verificando Reglas 3132/2024"
                                     }, void 0, false, {
                                         fileName: "[project]/app/dashboard/innovation/page.tsx",
@@ -343,7 +343,7 @@ function InnovationPage() {
                                             className: "flex justify-between text-sm",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    className: "text-slate-400",
+                                                    className: "text-muted-foreground font-light",
                                                     children: "Validaciones Hoy"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/dashboard/innovation/page.tsx",
@@ -368,7 +368,7 @@ function InnovationPage() {
                                             className: "flex justify-between text-sm",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    className: "text-slate-400",
+                                                    className: "text-muted-foreground font-light",
                                                     children: "Intentos Bloqueados"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/dashboard/innovation/page.tsx",
@@ -392,7 +392,7 @@ function InnovationPage() {
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "h-1 bg-slate-800 rounded-full overflow-hidden",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "h-full bg-emerald-500 w-full animate-[shimmer_2s_infinite]"
+                                                className: "h-full bg-pastel-green-500 w-full animate-[shimmer_2s_infinite]"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/dashboard/innovation/page.tsx",
                                                 lineNumber: 41,
@@ -421,7 +421,7 @@ function InnovationPage() {
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Card"], {
-                        className: "border-slate-100 relative overflow-hidden",
+                        className: "border-border relative overflow-hidden",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "absolute top-0 right-0 p-4 opacity-10",
@@ -457,7 +457,7 @@ function InnovationPage() {
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardTitle"], {
-                                        className: "text-xl font-bold text-slate-900",
+                                        className: "text-xl font-bold text-foreground font-title",
                                         children: "Reportería Automática"
                                     }, void 0, false, {
                                         fileName: "[project]/app/dashboard/innovation/page.tsx",
@@ -485,7 +485,7 @@ function InnovationPage() {
                                             className: "flex justify-between text-sm",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    className: "text-slate-500",
+                                                    className: "text-muted-foreground font-light",
                                                     children: "Próximo Reporte"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/dashboard/innovation/page.tsx",
@@ -493,7 +493,7 @@ function InnovationPage() {
                                                     columnNumber: 33
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    className: "font-mono font-bold text-slate-700",
+                                                    className: "font-mono font-bold text-foreground font-medium",
                                                     children: "En 14 días"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/dashboard/innovation/page.tsx",
@@ -510,7 +510,7 @@ function InnovationPage() {
                                             className: "flex justify-between text-sm",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    className: "text-slate-500",
+                                                    className: "text-muted-foreground font-light",
                                                     children: "Datos Procesados"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/dashboard/innovation/page.tsx",
@@ -518,7 +518,7 @@ function InnovationPage() {
                                                     columnNumber: 33
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    className: "font-mono font-bold text-slate-700",
+                                                    className: "font-mono font-bold text-foreground font-medium",
                                                     children: "1.2 GB"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/dashboard/innovation/page.tsx",
@@ -549,7 +549,7 @@ function InnovationPage() {
                         columnNumber: 18
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Card"], {
-                        className: "border-slate-100 relative overflow-hidden",
+                        className: "border-border relative overflow-hidden",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "absolute top-0 right-0 p-4 opacity-10",
@@ -585,7 +585,7 @@ function InnovationPage() {
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardTitle"], {
-                                        className: "text-xl font-bold text-slate-900",
+                                        className: "text-xl font-bold text-foreground font-title",
                                         children: "Soporte Técnico 24/7"
                                     }, void 0, false, {
                                         fileName: "[project]/app/dashboard/innovation/page.tsx",
@@ -613,7 +613,7 @@ function InnovationPage() {
                                             className: "flex justify-between text-sm",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    className: "text-slate-500",
+                                                    className: "text-muted-foreground font-light",
                                                     children: "Tickets Resueltos"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/dashboard/innovation/page.tsx",
@@ -621,7 +621,7 @@ function InnovationPage() {
                                                     columnNumber: 33
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    className: "font-mono font-bold text-slate-700",
+                                                    className: "font-mono font-bold text-foreground font-medium",
                                                     children: "15 (Hoy)"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/dashboard/innovation/page.tsx",
@@ -638,7 +638,7 @@ function InnovationPage() {
                                             className: "flex justify-between text-sm",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    className: "text-slate-500",
+                                                    className: "text-muted-foreground font-light",
                                                     children: "Tiempo Respuesta"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/dashboard/innovation/page.tsx",
@@ -646,7 +646,7 @@ function InnovationPage() {
                                                     columnNumber: 33
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    className: "font-mono font-bold text-emerald-600",
+                                                    className: "font-mono font-bold text-pastel-green-600",
                                                     children: "0.4s"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/dashboard/innovation/page.tsx",
@@ -685,10 +685,10 @@ function InnovationPage() {
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                        className: "text-xl font-bold text-slate-900 mb-6 flex items-center gap-2",
+                        className: "text-xl font-bold text-foreground font-title mb-6 flex items-center gap-2",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$workflow$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Workflow$3e$__["Workflow"], {
-                                className: "text-emerald-600"
+                                className: "text-pastel-green-600"
                             }, void 0, false, {
                                 fileName: "[project]/app/dashboard/innovation/page.tsx",
                                 lineNumber: 101,
@@ -705,10 +705,10 @@ function InnovationPage() {
                         className: "grid grid-cols-1 md:grid-cols-2 gap-4",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex items-center gap-4 hover:border-emerald-200 transition-colors cursor-pointer group",
+                                className: "bg-white p-6 rounded-2xl border border-border shadow-sm flex items-center gap-4 hover:border-pastel-green-200 transition-colors cursor-pointer group",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "h-12 w-12 rounded-xl bg-slate-100 flex items-center justify-center group-hover:bg-emerald-50 group-hover:text-emerald-600 transition-colors",
+                                        className: "h-12 w-12 rounded-xl bg-sand-gold-50 flex items-center justify-center group-hover:bg-pastel-green-50 group-hover:text-pastel-green-600 transition-colors",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$bot$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Bot$3e$__["Bot"], {}, void 0, false, {
                                             fileName: "[project]/app/dashboard/innovation/page.tsx",
                                             lineNumber: 107,
@@ -723,7 +723,7 @@ function InnovationPage() {
                                         className: "flex-1",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                className: "font-bold text-slate-800",
+                                                className: "font-bold text-foreground font-title",
                                                 children: "Alerta de Humedad IoT"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/dashboard/innovation/page.tsx",
@@ -731,7 +731,7 @@ function InnovationPage() {
                                                 columnNumber: 29
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                className: "text-xs text-slate-500",
+                                                className: "text-xs text-muted-foreground font-light",
                                                 children: "Sensor → N8N → WhatsApp (Groom)"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/dashboard/innovation/page.tsx",
@@ -745,7 +745,7 @@ function InnovationPage() {
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$ui$2f$badge$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Badge"], {
-                                        className: "bg-emerald-100 text-emerald-700",
+                                        className: "bg-pastel-green-100 text-pastel-green-700",
                                         children: "Activo"
                                     }, void 0, false, {
                                         fileName: "[project]/app/dashboard/innovation/page.tsx",
@@ -759,10 +759,10 @@ function InnovationPage() {
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex items-center gap-4 hover:border-emerald-200 transition-colors cursor-pointer group",
+                                className: "bg-white p-6 rounded-2xl border border-border shadow-sm flex items-center gap-4 hover:border-pastel-green-200 transition-colors cursor-pointer group",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "h-12 w-12 rounded-xl bg-slate-100 flex items-center justify-center group-hover:bg-emerald-50 group-hover:text-emerald-600 transition-colors",
+                                        className: "h-12 w-12 rounded-xl bg-sand-gold-50 flex items-center justify-center group-hover:bg-pastel-green-50 group-hover:text-pastel-green-600 transition-colors",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$cpu$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Cpu$3e$__["Cpu"], {}, void 0, false, {
                                             fileName: "[project]/app/dashboard/innovation/page.tsx",
                                             lineNumber: 118,
@@ -777,7 +777,7 @@ function InnovationPage() {
                                         className: "flex-1",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                className: "font-bold text-slate-800",
+                                                className: "font-bold text-foreground font-title",
                                                 children: "Sincronización REPROCANN"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/dashboard/innovation/page.tsx",
@@ -785,7 +785,7 @@ function InnovationPage() {
                                                 columnNumber: 29
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                className: "text-xs text-slate-500",
+                                                className: "text-xs text-muted-foreground font-light",
                                                 children: "Ministerio API → DB Update"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/dashboard/innovation/page.tsx",
@@ -799,7 +799,7 @@ function InnovationPage() {
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$ui$2f$badge$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Badge"], {
-                                        className: "bg-emerald-100 text-emerald-700",
+                                        className: "bg-pastel-green-100 text-pastel-green-700",
                                         children: "Activo"
                                     }, void 0, false, {
                                         fileName: "[project]/app/dashboard/innovation/page.tsx",
@@ -813,10 +813,10 @@ function InnovationPage() {
                                 columnNumber: 22
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex items-center gap-4 hover:border-emerald-200 transition-colors cursor-pointer group",
+                                className: "bg-white p-6 rounded-2xl border border-border shadow-sm flex items-center gap-4 hover:border-pastel-green-200 transition-colors cursor-pointer group",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "h-12 w-12 rounded-xl bg-slate-100 flex items-center justify-center group-hover:bg-emerald-50 group-hover:text-emerald-600 transition-colors",
+                                        className: "h-12 w-12 rounded-xl bg-sand-gold-50 flex items-center justify-center group-hover:bg-pastel-green-50 group-hover:text-pastel-green-600 transition-colors",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$file$2d$text$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__FileText$3e$__["FileText"], {}, void 0, false, {
                                             fileName: "[project]/app/dashboard/innovation/page.tsx",
                                             lineNumber: 129,
@@ -831,7 +831,7 @@ function InnovationPage() {
                                         className: "flex-1",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                className: "font-bold text-slate-800",
+                                                className: "font-bold text-foreground font-title",
                                                 children: "Generación PDF Lotes"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/dashboard/innovation/page.tsx",
@@ -839,7 +839,7 @@ function InnovationPage() {
                                                 columnNumber: 29
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                className: "text-xs text-slate-500",
+                                                className: "text-xs text-muted-foreground font-light",
                                                 children: "Nuevo Lote → Generar QR → Imprimir"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/dashboard/innovation/page.tsx",
@@ -853,7 +853,7 @@ function InnovationPage() {
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$ui$2f$badge$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Badge"], {
-                                        className: "bg-slate-100 text-slate-500",
+                                        className: "bg-sand-gold-50 text-muted-foreground font-light",
                                         children: "Pausado"
                                     }, void 0, false, {
                                         fileName: "[project]/app/dashboard/innovation/page.tsx",
@@ -879,10 +879,10 @@ function InnovationPage() {
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "bg-slate-900 rounded-2xl p-8 text-center relative overflow-hidden",
+                className: "bg-foreground rounded-2xl p-8 text-center relative overflow-hidden",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "absolute inset-0 bg-gradient-to-r from-emerald-500/20 to-blue-500/20 animate-pulse"
+                        className: "absolute inset-0 bg-gradient-to-r from-pastel-green-500/20 to-blue-500/20 animate-pulse"
                     }, void 0, false, {
                         fileName: "[project]/app/dashboard/innovation/page.tsx",
                         lineNumber: 141,
@@ -897,7 +897,7 @@ function InnovationPage() {
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "text-slate-400 relative z-10 max-w-xl mx-auto mb-8",
+                        className: "text-muted-foreground font-light relative z-10 max-w-xl mx-auto mb-8",
                         children: "Nuestro equipo de ingeniería puede crear flujos personalizados usando n8n y LangChain para conectar sus sistemas existentes."
                     }, void 0, false, {
                         fileName: "[project]/app/dashboard/innovation/page.tsx",
@@ -905,7 +905,7 @@ function InnovationPage() {
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
-                        className: "relative z-10 bg-white text-slate-900 font-bold hover:bg-emerald-50",
+                        className: "relative z-10 bg-white text-foreground font-title font-bold hover:bg-pastel-green-50",
                         children: "Solicitar Consultoría"
                     }, void 0, false, {
                         fileName: "[project]/app/dashboard/innovation/page.tsx",

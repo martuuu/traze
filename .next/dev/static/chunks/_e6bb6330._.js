@@ -24,7 +24,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$utils$2e$ts__$
 ;
 const Card = /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["forwardRef"](_c = ({ className, ...props }, ref)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         ref: ref,
-        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("rounded-3xl border bg-card text-card-foreground shadow-sm", className),
+        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("rounded-[2rem] border border-border bg-card text-card-foreground shadow-xl shadow-sand-gold-900/5", className),
         ...props
     }, void 0, false, {
         fileName: "[project]/app/components/ui/card.tsx",
@@ -125,22 +125,22 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$utils$2e$ts__$
 ;
 ;
 ;
-const buttonVariants = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$class$2d$variance$2d$authority$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cva"])("inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50", {
+const buttonVariants = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$class$2d$variance$2d$authority$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cva"])("inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 active:scale-[0.98]", {
     variants: {
         variant: {
-            default: "bg-primary text-primary-foreground hover:bg-primary/90",
-            destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-            outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+            default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-md shadow-primary/20",
+            destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90 shadow-sm",
+            outline: "border border-sand-gold-300 bg-background hover:bg-sand-gold-50 hover:text-foreground",
             secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-            ghost: "hover:bg-accent hover:text-accent-foreground",
+            ghost: "hover:bg-sand-gold-50 hover:text-foreground",
             link: "text-primary underline-offset-4 hover:underline",
-            glass: "bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20"
+            glass: "bg-white/40 backdrop-blur-md border border-sand-gold-200 text-foreground hover:bg-white/60 shadow-sm"
         },
         size: {
-            default: "h-10 px-4 py-2",
-            sm: "h-9 rounded-md px-3",
-            lg: "h-11 rounded-md px-8",
-            icon: "h-10 w-10"
+            default: "h-12 px-6 py-2",
+            sm: "h-9 rounded-full px-4",
+            lg: "h-14 rounded-full px-8 text-base",
+            icon: "h-12 w-12 rounded-full"
         }
     },
     defaultVariants: {
@@ -190,7 +190,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$utils$2e$ts__$
 const Input = /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["forwardRef"](_c = ({ className, type, ...props }, ref)=>{
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
         type: type,
-        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50", className),
+        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("flex h-12 w-full rounded-2xl border border-input bg-background/50 backdrop-blur-sm px-4 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all", className),
         ref: ref,
         ...props
     }, void 0, false, {
@@ -231,9 +231,9 @@ const badgeVariants = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_m
             secondary: "border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80",
             destructive: "border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80",
             outline: "text-foreground",
-            success: "border-transparent bg-emerald-100 text-emerald-800",
-            warning: "border-transparent bg-amber-100 text-amber-800",
-            error: "border-transparent bg-red-100 text-red-800"
+            success: "border-transparent bg-pastel-green-100 text-pastel-green-800",
+            warning: "border-transparent bg-sand-gold-200 text-sand-gold-900",
+            error: "border-transparent bg-red-50 text-red-800"
         }
     },
     defaultVariants: {
@@ -877,7 +877,7 @@ var _s = __turbopack_context__.k.signature();
 ;
 const stageColors = {
     'Floración': 'bg-purple-100 text-purple-700 border-purple-200',
-    'Vegetativo': 'bg-emerald-100 text-emerald-700 border-emerald-200',
+    'Vegetativo': 'bg-pastel-green-100 text-pastel-green-700 border-pastel-green-200',
     'Secado': 'bg-amber-100 text-amber-700 border-amber-200'
 };
 function LotesPage() {
@@ -935,7 +935,7 @@ function LotesPage() {
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                                className: "text-3xl font-black text-slate-900 tracking-tight",
+                                className: "text-3xl font-black text-foreground font-title tracking-tight",
                                 children: "Lotes de Cultivo"
                             }, void 0, false, {
                                 fileName: "[project]/app/dashboard/lotes/page.tsx",
@@ -943,7 +943,7 @@ function LotesPage() {
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "text-slate-500",
+                                className: "text-muted-foreground font-light",
                                 children: "Gestión agrupada de plantas y acciones masivas."
                             }, void 0, false, {
                                 fileName: "[project]/app/dashboard/lotes/page.tsx",
@@ -958,7 +958,7 @@ function LotesPage() {
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
                         onClick: ()=>setIsCreateOpen(true),
-                        className: "bg-slate-900 hover:bg-slate-800 text-white font-bold shadow-lg shadow-slate-900/20",
+                        className: "bg-foreground hover:bg-foreground/90 text-white font-bold shadow-lg shadow-sand-gold-900/10",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$plus$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Plus$3e$__["Plus"], {
                                 className: "mr-2 h-4 w-4"
@@ -981,7 +981,7 @@ function LotesPage() {
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Card"], {
-                className: "border-slate-100 shadow-sm sticky top-4 z-20",
+                className: "border-border shadow-sm sticky top-4 z-20",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardContent"], {
                     className: "p-4 flex flex-col md:flex-row gap-4 justify-between items-center",
                     children: [
@@ -989,7 +989,7 @@ function LotesPage() {
                             className: "relative w-full md:w-96",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$search$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Search$3e$__["Search"], {
-                                    className: "absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 h-4 w-4"
+                                    className: "absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground font-light h-4 w-4"
                                 }, void 0, false, {
                                     fileName: "[project]/app/dashboard/lotes/page.tsx",
                                     lineNumber: 78,
@@ -997,7 +997,7 @@ function LotesPage() {
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
                                     placeholder: "Buscar por nombre o genética...",
-                                    className: "pl-10 bg-slate-50 border-slate-200",
+                                    className: "pl-10 bg-card border-border",
                                     value: searchTerm,
                                     onChange: (e)=>setSearchTerm(e.target.value)
                                 }, void 0, false, {
@@ -1016,7 +1016,7 @@ function LotesPage() {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
                                     variant: "outline",
-                                    className: "border-slate-200 text-slate-600 flex-1 md:flex-none",
+                                    className: "border-border text-muted-foreground flex-1 md:flex-none",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$funnel$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Filter$3e$__["Filter"], {
                                             className: "mr-2 h-4 w-4"
@@ -1034,7 +1034,7 @@ function LotesPage() {
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
                                     variant: "outline",
-                                    className: "border-slate-200 text-slate-600 flex-1 md:flex-none",
+                                    className: "border-border text-muted-foreground flex-1 md:flex-none",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$calendar$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Calendar$3e$__["Calendar"], {
                                             className: "mr-2 h-4 w-4"
@@ -1070,12 +1070,12 @@ function LotesPage() {
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "space-y-4",
                 children: filteredLotes.map((lote)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Card"], {
-                        className: "border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 group overflow-hidden",
+                        className: "border-border shadow-sm hover:shadow-md transition-all duration-300 group overflow-hidden",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "flex flex-col md:flex-row items-stretch",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("w-full md:w-2 h-2 md:h-auto", lote.stage === 'Floración' ? 'bg-purple-500' : lote.stage === 'Vegetativo' ? 'bg-emerald-500' : 'bg-amber-500')
+                                    className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("w-full md:w-2 h-2 md:h-auto", lote.stage === 'Floración' ? 'bg-purple-500' : lote.stage === 'Vegetativo' ? 'bg-pastel-green-500' : 'bg-amber-500')
                                 }, void 0, false, {
                                     fileName: "[project]/app/dashboard/lotes/page.tsx",
                                     lineNumber: 103,
@@ -1091,7 +1091,7 @@ function LotesPage() {
                                                     className: "flex items-start gap-4",
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                            className: "h-12 w-12 rounded-xl bg-slate-100 flex items-center justify-center shrink-0 font-black text-slate-400 border border-slate-200",
+                                                            className: "h-12 w-12 rounded-xl bg-sand-gold-50 flex items-center justify-center shrink-0 font-black text-muted-foreground font-light border border-border",
                                                             children: lote.id.substring(1)
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/dashboard/lotes/page.tsx",
@@ -1101,7 +1101,7 @@ function LotesPage() {
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                                    className: "text-lg font-black text-slate-900 group-hover:text-emerald-700 transition-colors",
+                                                                    className: "text-lg font-black text-foreground font-title group-hover:text-pastel-green-700 transition-colors",
                                                                     children: lote.name
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/dashboard/lotes/page.tsx",
@@ -1109,11 +1109,11 @@ function LotesPage() {
                                                                     columnNumber: 45
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                    className: "flex items-center gap-2 text-sm text-slate-500 font-medium",
+                                                                    className: "flex items-center gap-2 text-sm text-muted-foreground font-light font-medium",
                                                                     children: [
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$leaf$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Leaf$3e$__["Leaf"], {
                                                                             size: 14,
-                                                                            className: "text-emerald-500"
+                                                                            className: "text-pastel-green-500"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/dashboard/lotes/page.tsx",
                                                                             lineNumber: 118,
@@ -1129,7 +1129,7 @@ function LotesPage() {
                                                                             columnNumber: 49
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                            className: "text-slate-500",
+                                                                            className: "text-muted-foreground font-light",
                                                                             children: lote.location
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/dashboard/lotes/page.tsx",
@@ -1159,7 +1159,7 @@ function LotesPage() {
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$ui$2f$badge$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Badge"], {
                                                             variant: "outline",
-                                                            className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("px-3 py-1 font-bold", stageColors[lote.stage] || 'bg-slate-100'),
+                                                            className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("px-3 py-1 font-bold", stageColors[lote.stage] || 'bg-sand-gold-50'),
                                                             children: lote.stage
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/dashboard/lotes/page.tsx",
@@ -1170,7 +1170,7 @@ function LotesPage() {
                                                             trigger: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
                                                                 variant: "ghost",
                                                                 size: "icon",
-                                                                className: "h-8 w-8 text-slate-400 hover:text-slate-600",
+                                                                className: "h-8 w-8 text-muted-foreground font-light hover:text-muted-foreground",
                                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$ellipsis$2d$vertical$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__MoreVertical$3e$__["MoreVertical"], {
                                                                     size: 16
                                                                 }, void 0, false, {
@@ -1245,7 +1245,7 @@ function LotesPage() {
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                    className: "text-2xl font-black text-slate-900",
+                                                                    className: "text-2xl font-black text-foreground font-title",
                                                                     children: lote.plants
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/dashboard/lotes/page.tsx",
@@ -1253,7 +1253,7 @@ function LotesPage() {
                                                                     columnNumber: 45
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                    className: "text-[10px] uppercase font-bold text-slate-400",
+                                                                    className: "text-[10px] uppercase font-bold text-muted-foreground font-light",
                                                                     children: "Plantas Vivas"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/dashboard/lotes/page.tsx",
@@ -1269,7 +1269,7 @@ function LotesPage() {
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                    className: "text-sm font-bold text-slate-700",
+                                                                    className: "text-sm font-bold text-foreground font-medium",
                                                                     children: lote.startDate
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/dashboard/lotes/page.tsx",
@@ -1277,7 +1277,7 @@ function LotesPage() {
                                                                     columnNumber: 46
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                    className: "text-[10px] uppercase font-bold text-slate-400",
+                                                                    className: "text-[10px] uppercase font-bold text-muted-foreground font-light",
                                                                     children: "Fecha Inicio"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/dashboard/lotes/page.tsx",
@@ -1293,7 +1293,7 @@ function LotesPage() {
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                    className: "text-sm font-bold text-emerald-600 truncate",
+                                                                    className: "text-sm font-bold text-pastel-green-600 truncate",
                                                                     children: lote.lastAction
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/dashboard/lotes/page.tsx",
@@ -1301,7 +1301,7 @@ function LotesPage() {
                                                                     columnNumber: 46
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                    className: "text-[10px] uppercase font-bold text-slate-400",
+                                                                    className: "text-[10px] uppercase font-bold text-muted-foreground font-light",
                                                                     children: "Última Acción"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/dashboard/lotes/page.tsx",
@@ -1432,7 +1432,7 @@ function LotesPage() {
                             className: "space-y-2",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                    className: "text-sm font-bold text-slate-700 block",
+                                    className: "text-sm font-bold text-foreground font-medium block",
                                     children: "Nombre del Lote"
                                 }, void 0, false, {
                                     fileName: "[project]/app/dashboard/lotes/page.tsx",
@@ -1461,7 +1461,7 @@ function LotesPage() {
                             className: "space-y-2",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                    className: "text-sm font-bold text-slate-700 block",
+                                    className: "text-sm font-bold text-foreground font-medium block",
                                     children: "Genética Principal"
                                 }, void 0, false, {
                                     fileName: "[project]/app/dashboard/lotes/page.tsx",
@@ -1490,7 +1490,7 @@ function LotesPage() {
                             className: "space-y-2",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                    className: "text-sm font-bold text-slate-700 block",
+                                    className: "text-sm font-bold text-foreground font-medium block",
                                     children: "Ubicación Inicial"
                                 }, void 0, false, {
                                     fileName: "[project]/app/dashboard/lotes/page.tsx",
@@ -1517,7 +1517,7 @@ function LotesPage() {
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
                             onClick: handleCreate,
-                            className: "w-full bg-slate-900 hover:bg-slate-800 font-bold",
+                            className: "w-full bg-foreground hover:bg-foreground/90 font-bold",
                             disabled: !newLote.name.trim(),
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$layers$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Layers$3e$__["Layers"], {
@@ -1578,7 +1578,7 @@ function LotesPage() {
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                                className: "text-sm font-bold text-slate-700 block mb-1",
+                                                className: "text-sm font-bold text-foreground font-medium block mb-1",
                                                 children: "Volumen Total (Litros)"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/dashboard/lotes/page.tsx",
@@ -1609,7 +1609,7 @@ function LotesPage() {
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "pt-4 flex gap-2",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
-                                className: "w-full bg-slate-900 font-bold",
+                                className: "w-full bg-foreground font-bold",
                                 onClick: ()=>setSelectedAction(null),
                                 children: "Confirmar Acción Masiva"
                             }, void 0, false, {

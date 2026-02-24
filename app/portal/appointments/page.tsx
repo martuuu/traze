@@ -10,10 +10,10 @@ export default function AppointmentsPage() {
         <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500 pb-20 max-w-4xl mx-auto">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                 <div>
-                     <h1 className="text-3xl font-black text-slate-900 tracking-tight">Consultas Médicas</h1>
-                     <p className="text-slate-500">Agenda tus turnos y revisa tu historial de visitas.</p>
+                     <h1 className="text-3xl font-black text-foreground font-title tracking-tight">Consultas Médicas</h1>
+                     <p className="text-muted-foreground font-light">Agenda tus turnos y revisa tu historial de visitas.</p>
                 </div>
-                <Button className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold shadow-lg shadow-emerald-500/20">
+                <Button className="bg-pastel-green-600 hover:bg-pastel-green-700 text-white font-bold shadow-lg shadow-pastel-green-500/20">
                     <Plus className="mr-2 h-4 w-4" /> Solicitar Turno
                 </Button>
             </div>
@@ -25,7 +25,7 @@ export default function AppointmentsPage() {
                 </div>
                 <CardContent className="p-8 relative z-10">
                     <div className="flex flex-col gap-6">
-                        <div className="flex items-center gap-2 text-emerald-400 font-bold uppercase tracking-widest text-xs">
+                        <div className="flex items-center gap-2 text-pastel-green-400 font-bold uppercase tracking-widest text-xs">
                             <Clock size={14} /> Próximo Turno
                         </div>
                         
@@ -40,7 +40,7 @@ export default function AppointmentsPage() {
                                 <p className="text-slate-300 flex items-center gap-2">
                                     <Stethoscope size={16} /> Dr. Ricardo Favaloro
                                 </p>
-                                <p className="text-emerald-400 font-mono text-sm flex items-center gap-2 mt-2">
+                                <p className="text-pastel-green-400 font-mono text-sm flex items-center gap-2 mt-2">
                                     <Video size={14} /> Video-llamada (Zoom)
                                 </p>
                             </div>
@@ -57,23 +57,23 @@ export default function AppointmentsPage() {
 
             {/* History */}
             <div>
-                <h3 className="text-lg font-bold text-slate-900 mb-4 px-1">Historial de Visitas</h3>
+                <h3 className="text-lg font-bold text-foreground font-title mb-4 px-1">Historial de Visitas</h3>
                 <div className="space-y-3">
                      {[
                         { date: '10 Ago, 2024', type: 'Renovación Receta', doctor: 'Dra. Ana Lopez', method: 'Online' },
                         { date: '14 May, 2024', type: 'Consulta General', doctor: 'Dr. Ricardo Favaloro', method: 'Presencial' },
                         { date: '02 Ene, 2024', type: 'Ingreso Protocolo', doctor: 'Dr. Ricardo Favaloro', method: 'Presencial' },
                      ].map((visit, i) => (
-                         <Card key={i} className="border-slate-100 hover:border-emerald-200 transition-colors cursor-pointer group">
+                         <Card key={i} className="border-border hover:border-pastel-green-200 transition-colors cursor-pointer group">
                             <CardContent className="p-4 flex items-center justify-between">
                                 <div className="flex items-center gap-4">
-                                    <div className="h-12 w-12 rounded-xl bg-slate-50 border border-slate-100 flex flex-col items-center justify-center text-slate-500 font-bold leading-none">
+                                    <div className="h-12 w-12 rounded-xl bg-card border border-border flex flex-col items-center justify-center text-muted-foreground font-light font-bold leading-none">
                                         <span className="text-lg">{visit.date.split(' ')[0]}</span>
                                         <span className="text-[10px] uppercase">{visit.date.split(' ')[1]}</span>
                                     </div>
                                     <div>
-                                        <h4 className="font-bold text-slate-900">{visit.type}</h4>
-                                        <p className="text-sm text-slate-500 flex items-center gap-2">
+                                        <h4 className="font-bold text-foreground font-title">{visit.type}</h4>
+                                        <p className="text-sm text-muted-foreground font-light flex items-center gap-2">
                                             {visit.doctor} 
                                             <span className="text-slate-300">•</span>
                                             <span className="flex items-center gap-1">
@@ -82,7 +82,7 @@ export default function AppointmentsPage() {
                                         </p>
                                     </div>
                                 </div>
-                                <ChevronRight className="text-slate-300 group-hover:text-emerald-500 transition-colors" />
+                                <ChevronRight className="text-slate-300 group-hover:text-pastel-green-500 transition-colors" />
                             </CardContent>
                          </Card>
                      ))}

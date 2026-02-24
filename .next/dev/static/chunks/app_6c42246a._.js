@@ -24,7 +24,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$utils$2e$ts__$
 ;
 const Card = /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["forwardRef"](_c = ({ className, ...props }, ref)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         ref: ref,
-        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("rounded-3xl border bg-card text-card-foreground shadow-sm", className),
+        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("rounded-[2rem] border border-border bg-card text-card-foreground shadow-xl shadow-sand-gold-900/5", className),
         ...props
     }, void 0, false, {
         fileName: "[project]/app/components/ui/card.tsx",
@@ -402,11 +402,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$utils$2e$ts__$
 ;
 function GlassCard({ children, className, ...props }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("relative overflow-hidden rounded-3xl border border-white/20 bg-white/10 backdrop-blur-md shadow-lg", className),
+        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("relative overflow-hidden rounded-[2rem] border border-sand-gold-200/50 bg-white/40 backdrop-blur-xl shadow-xl shadow-sand-gold-900/5", className),
         ...props,
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "absolute inset-0 z-0 bg-gradient-to-br from-white/10 to-transparent opacity-50 pointer-events-none"
+                className: "absolute inset-0 z-0 bg-gradient-to-br from-white/60 to-transparent opacity-50 pointer-events-none mix-blend-overlay"
             }, void 0, false, {
                 fileName: "[project]/app/components/ui/glass-card.tsx",
                 lineNumber: 17,
@@ -453,22 +453,22 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$utils$2e$ts__$
 ;
 ;
 ;
-const buttonVariants = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$class$2d$variance$2d$authority$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cva"])("inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50", {
+const buttonVariants = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$class$2d$variance$2d$authority$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cva"])("inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 active:scale-[0.98]", {
     variants: {
         variant: {
-            default: "bg-primary text-primary-foreground hover:bg-primary/90",
-            destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-            outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+            default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-md shadow-primary/20",
+            destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90 shadow-sm",
+            outline: "border border-sand-gold-300 bg-background hover:bg-sand-gold-50 hover:text-foreground",
             secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-            ghost: "hover:bg-accent hover:text-accent-foreground",
+            ghost: "hover:bg-sand-gold-50 hover:text-foreground",
             link: "text-primary underline-offset-4 hover:underline",
-            glass: "bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20"
+            glass: "bg-white/40 backdrop-blur-md border border-sand-gold-200 text-foreground hover:bg-white/60 shadow-sm"
         },
         size: {
-            default: "h-10 px-4 py-2",
-            sm: "h-9 rounded-md px-3",
-            lg: "h-11 rounded-md px-8",
-            icon: "h-10 w-10"
+            default: "h-12 px-6 py-2",
+            sm: "h-9 rounded-full px-4",
+            lg: "h-14 rounded-full px-8 text-base",
+            icon: "h-12 w-12 rounded-full"
         }
     },
     defaultVariants: {
@@ -667,7 +667,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$utils$2e$ts__$
 const Input = /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["forwardRef"](_c = ({ className, type, ...props }, ref)=>{
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
         type: type,
-        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50", className),
+        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("flex h-12 w-full rounded-2xl border border-input bg-background/50 backdrop-blur-sm px-4 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all", className),
         ref: ref,
         ...props
     }, void 0, false, {
@@ -725,13 +725,13 @@ var _s = __turbopack_context__.k.signature();
 // Stat Card Component
 const StatCard = ({ title, value, icon: Icon, trend, color = "emerald" })=>{
     const colorStyles = {
-        emerald: "bg-emerald-50 text-emerald-600 border-emerald-100",
-        blue: "bg-blue-50 text-blue-600 border-blue-100",
-        purple: "bg-purple-50 text-purple-600 border-purple-100",
-        amber: "bg-amber-50 text-amber-600 border-amber-100"
+        emerald: "bg-pastel-green-50 text-pastel-green-700 border-pastel-green-200",
+        blue: "bg-sand-gold-50 text-sand-gold-700 border-sand-gold-200",
+        purple: "bg-card text-foreground border-border",
+        amber: "bg-orange-50 text-orange-700 border-orange-200"
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Card"], {
-        className: "rounded-2xl border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 group",
+        className: "rounded-[2rem] border-border shadow-md shadow-sand-gold-900/5 hover:shadow-lg transition-all duration-400 group bg-card",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardContent"], {
             className: "p-6",
             children: [
@@ -740,7 +740,8 @@ const StatCard = ({ title, value, icon: Icon, trend, color = "emerald" })=>{
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("h-12 w-12 rounded-xl flex items-center justify-center border", colorStyles[color]),
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Icon, {
-                            size: 24
+                            size: 24,
+                            strokeWidth: 1.5
                         }, void 0, false, {
                             fileName: "[project]/app/dashboard/page.tsx",
                             lineNumber: 39,
@@ -760,7 +761,7 @@ const StatCard = ({ title, value, icon: Icon, trend, color = "emerald" })=>{
                     className: "space-y-1",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                            className: "text-sm font-medium text-slate-500",
+                            className: "text-sm font-medium text-muted-foreground",
                             children: title
                         }, void 0, false, {
                             fileName: "[project]/app/dashboard/page.tsx",
@@ -771,7 +772,7 @@ const StatCard = ({ title, value, icon: Icon, trend, color = "emerald" })=>{
                             className: "flex items-baseline gap-2",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: "text-2xl font-black text-slate-900",
+                                    className: "text-3xl font-light font-title text-foreground",
                                     children: value
                                 }, void 0, false, {
                                     fileName: "[project]/app/dashboard/page.tsx",
@@ -779,7 +780,7 @@ const StatCard = ({ title, value, icon: Icon, trend, color = "emerald" })=>{
                                     columnNumber: 25
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 trend && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: "text-xs font-bold text-emerald-600 flex items-center bg-emerald-50 px-2 py-0.5 rounded-full",
+                                    className: "text-xs font-medium text-pastel-green-700 flex items-center bg-pastel-green-50/50 px-2 py-0.5 rounded-full border border-pastel-green-200",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trending$2d$up$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__TrendingUp$3e$__["TrendingUp"], {
                                             size: 10,
@@ -882,7 +883,7 @@ function DashboardPage() {
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                    className: "text-sm font-bold text-slate-700 block mb-1",
+                                    className: "text-sm font-bold text-foreground font-medium block mb-1",
                                     children: "Nombre del Lote"
                                 }, void 0, false, {
                                     fileName: "[project]/app/dashboard/page.tsx",
@@ -908,7 +909,7 @@ function DashboardPage() {
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                            className: "text-sm font-bold text-slate-700 block mb-1",
+                                            className: "text-sm font-bold text-foreground font-medium block mb-1",
                                             children: "Genética"
                                         }, void 0, false, {
                                             fileName: "[project]/app/dashboard/page.tsx",
@@ -916,7 +917,7 @@ function DashboardPage() {
                                             columnNumber: 25
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
-                                            className: "w-full h-10 rounded-md border border-slate-200 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500",
+                                            className: "w-full h-10 rounded-md border border-border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-pastel-green-500",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                                     children: "Blue Dream"
@@ -954,7 +955,7 @@ function DashboardPage() {
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                            className: "text-sm font-bold text-slate-700 block mb-1",
+                                            className: "text-sm font-bold text-foreground font-medium block mb-1",
                                             children: "Cantidad Plantas"
                                         }, void 0, false, {
                                             fileName: "[project]/app/dashboard/page.tsx",
@@ -984,7 +985,7 @@ function DashboardPage() {
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                    className: "text-sm font-bold text-slate-700 block mb-1",
+                                    className: "text-sm font-bold text-foreground font-medium block mb-1",
                                     children: "Ubicación Inicial"
                                 }, void 0, false, {
                                     fileName: "[project]/app/dashboard/page.tsx",
@@ -992,7 +993,7 @@ function DashboardPage() {
                                     columnNumber: 21
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
-                                    className: "w-full h-10 rounded-md border border-slate-200 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500",
+                                    className: "w-full h-10 rounded-md border border-border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-pastel-green-500",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                             children: "Sala A - Vegetativo"
@@ -1055,7 +1056,7 @@ function DashboardPage() {
                             className: "pt-2",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
                                 type: "button",
-                                className: "w-full bg-emerald-600 hover:bg-emerald-700 font-bold",
+                                className: "w-full bg-pastel-green-600 hover:bg-pastel-green-700 font-bold",
                                 onClick: ()=>setIsModalOpen(false),
                                 children: "Crear Lote e Imprimir Etiquetas"
                             }, void 0, false, {
@@ -1085,7 +1086,7 @@ function DashboardPage() {
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                                className: "text-3xl font-black text-slate-900 tracking-tight",
+                                className: "text-4xl font-black font-title text-foreground tracking-tight",
                                 children: "Panel Principal"
                             }, void 0, false, {
                                 fileName: "[project]/app/dashboard/page.tsx",
@@ -1093,7 +1094,7 @@ function DashboardPage() {
                                 columnNumber: 17
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "text-slate-500",
+                                className: "text-muted-foreground font-light mt-1",
                                 children: [
                                     "Bienvenido de nuevo, ",
                                     __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$constants$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["MOCK_ORG"].responsiblePerson
@@ -1110,14 +1111,14 @@ function DashboardPage() {
                         columnNumber: 13
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex gap-2",
+                        className: "flex gap-3",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "inline-flex items-center px-4 py-2 rounded-xl bg-white border border-slate-200 text-sm font-bold text-slate-700 shadow-sm",
+                                className: "inline-flex items-center px-4 py-2 rounded-full bg-card border border-border text-sm font-medium text-foreground shadow-sm",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$calendar$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Calendar$3e$__["Calendar"], {
                                         size: 16,
-                                        className: "mr-2 text-slate-400"
+                                        className: "mr-2 text-muted-foreground"
                                     }, void 0, false, {
                                         fileName: "[project]/app/dashboard/page.tsx",
                                         lineNumber: 135,
@@ -1131,7 +1132,7 @@ function DashboardPage() {
                                 columnNumber: 17
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "inline-flex items-center px-4 py-2 rounded-xl bg-emerald-600 text-sm font-bold text-white shadow-lg shadow-emerald-500/20",
+                                className: "inline-flex items-center px-4 py-2 rounded-full bg-pastel-green-100 text-sm font-medium text-pastel-green-800 border border-pastel-green-200",
                                 children: "ONG Activa"
                             }, void 0, false, {
                                 fileName: "[project]/app/dashboard/page.tsx",
@@ -1208,15 +1209,15 @@ function DashboardPage() {
                         className: "lg:col-span-2 space-y-8",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$ui$2f$glass$2d$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["GlassCard"], {
-                                className: "bg-gradient-to-br from-slate-900 to-slate-800 border-slate-800 text-white",
+                                className: "bg-[#1A231F] border-white/5 text-sand-gold-50 shadow-2xl",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "flex flex-col md:flex-row items-start md:items-center justify-between mb-6",
+                                        className: "flex flex-col md:flex-row items-start md:items-center justify-between mb-8",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                        className: "text-xl font-bold text-white mb-2",
+                                                        className: "text-2xl font-black font-title text-white mb-2 tracking-tight",
                                                         children: "Semáforo de Compliance REPROCANN"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/dashboard/page.tsx",
@@ -1224,7 +1225,7 @@ function DashboardPage() {
                                                         columnNumber: 29
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                        className: "text-slate-400 text-sm",
+                                                        className: "text-[#A2B1A8] font-light text-sm",
                                                         children: "Monitoreo en tiempo real de límites legales."
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/dashboard/page.tsx",
@@ -1238,8 +1239,8 @@ function DashboardPage() {
                                                 columnNumber: 25
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "px-3 py-1 bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 rounded-full text-xs font-bold uppercase tracking-wider mt-4 md:mt-0",
-                                                children: "Estado: Seguro"
+                                                className: "px-4 py-1.5 bg-pastel-green-900/40 text-pastel-green-300 border border-pastel-green-800/50 rounded-full text-xs font-medium tracking-wide mt-4 md:mt-0",
+                                                children: "ESTADO: SEGURO"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/dashboard/page.tsx",
                                                 lineNumber: 184,
@@ -1255,13 +1256,13 @@ function DashboardPage() {
                                         className: "grid grid-cols-1 md:grid-cols-3 gap-6",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "bg-white/5 rounded-2xl p-4 border border-white/10",
+                                                className: "bg-[#242F29]/60 rounded-2xl p-5 border border-white/5 shadow-inner",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "flex justify-between items-center mb-2",
+                                                        className: "flex justify-between items-center mb-3",
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                className: "text-sm font-bold text-slate-300",
+                                                                className: "text-sm font-medium text-sand-gold-100",
                                                                 children: "Cupo Pacientes"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/dashboard/page.tsx",
@@ -1269,7 +1270,7 @@ function DashboardPage() {
                                                                 columnNumber: 33
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                className: "text-xs font-bold text-blue-400",
+                                                                className: "text-xs font-medium text-blue-300",
                                                                 children: [
                                                                     patientPercentage,
                                                                     "%"
@@ -1286,9 +1287,9 @@ function DashboardPage() {
                                                         columnNumber: 29
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "h-3 w-full bg-slate-700 rounded-full overflow-hidden mb-2",
+                                                        className: "h-2 w-full bg-[#1A231F] rounded-full overflow-hidden mb-3",
                                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                            className: "h-full bg-blue-500 rounded-full transition-all duration-1000",
+                                                            className: "h-full bg-blue-400/80 rounded-full transition-all duration-1000",
                                                             style: {
                                                                 width: `${patientPercentage}%`
                                                             }
@@ -1303,7 +1304,7 @@ function DashboardPage() {
                                                         columnNumber: 29
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "text-xs text-slate-500 font-mono",
+                                                        className: "text-xs text-[#A2B1A8] font-light",
                                                         children: [
                                                             __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$constants$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["MOCK_ORG"].currentPatients,
                                                             " / ",
@@ -1322,13 +1323,13 @@ function DashboardPage() {
                                                 columnNumber: 25
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "bg-white/5 rounded-2xl p-4 border border-white/10",
+                                                className: "bg-[#242F29]/60 rounded-2xl p-5 border border-white/5 shadow-inner",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "flex justify-between items-center mb-2",
+                                                        className: "flex justify-between items-center mb-3",
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                className: "text-sm font-bold text-slate-300",
+                                                                className: "text-sm font-medium text-sand-gold-100",
                                                                 children: "Plantas Floración"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/dashboard/page.tsx",
@@ -1336,7 +1337,7 @@ function DashboardPage() {
                                                                 columnNumber: 33
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                className: "text-xs font-bold text-emerald-400",
+                                                                className: "text-xs font-medium text-pastel-green-300",
                                                                 children: "85%"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/dashboard/page.tsx",
@@ -1350,9 +1351,9 @@ function DashboardPage() {
                                                         columnNumber: 29
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "h-3 w-full bg-slate-700 rounded-full overflow-hidden mb-2",
+                                                        className: "h-2 w-full bg-[#1A231F] rounded-full overflow-hidden mb-3",
                                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                            className: "h-full bg-emerald-500 rounded-full w-[85%]"
+                                                            className: "h-full bg-pastel-green-500/80 rounded-full w-[85%]"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/dashboard/page.tsx",
                                                             lineNumber: 211,
@@ -1364,8 +1365,8 @@ function DashboardPage() {
                                                         columnNumber: 30
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "text-xs text-slate-500 font-mono",
-                                                        children: "Limitado por m2 de sala"
+                                                        className: "text-xs text-[#A2B1A8] font-light",
+                                                        children: "Limitado por m² de sala"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/dashboard/page.tsx",
                                                         lineNumber: 213,
@@ -1378,13 +1379,13 @@ function DashboardPage() {
                                                 columnNumber: 26
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "bg-white/5 rounded-2xl p-4 border border-white/10",
+                                                className: "bg-[#242F29]/60 rounded-2xl p-5 border border-white/5 shadow-inner",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "flex justify-between items-center mb-2",
+                                                        className: "flex justify-between items-center mb-3",
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                className: "text-sm font-bold text-slate-300",
+                                                                className: "text-sm font-medium text-sand-gold-100",
                                                                 children: "Stock Seco"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/dashboard/page.tsx",
@@ -1392,7 +1393,7 @@ function DashboardPage() {
                                                                 columnNumber: 33
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                className: "text-xs font-bold text-amber-400",
+                                                                className: "text-xs font-medium text-sand-gold-400",
                                                                 children: "Low Risk"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/dashboard/page.tsx",
@@ -1406,9 +1407,9 @@ function DashboardPage() {
                                                         columnNumber: 29
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "h-3 w-full bg-slate-700 rounded-full overflow-hidden mb-2",
+                                                        className: "h-2 w-full bg-[#1A231F] rounded-full overflow-hidden mb-3",
                                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                            className: "h-full bg-amber-500 rounded-full w-[40%]"
+                                                            className: "h-full bg-sand-gold-400/80 rounded-full w-[40%]"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/dashboard/page.tsx",
                                                             lineNumber: 225,
@@ -1420,7 +1421,7 @@ function DashboardPage() {
                                                         columnNumber: 30
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "text-xs text-slate-500 font-mono",
+                                                        className: "text-xs text-[#A2B1A8] font-light",
                                                         children: "40% del límite permitido"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/dashboard/page.tsx",
@@ -1446,13 +1447,13 @@ function DashboardPage() {
                                 columnNumber: 17
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Card"], {
-                                className: "overflow-hidden border-slate-100",
+                                className: "overflow-hidden",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardHeader"], {
-                                        className: "bg-slate-50 border-b border-slate-100",
+                                        className: "bg-card border-b border-border",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardTitle"], {
-                                                className: "text-lg font-bold text-slate-800",
+                                                className: "text-xl font-title font-medium text-foreground",
                                                 children: "Actividad Reciente en Sala"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/dashboard/page.tsx",
@@ -1460,6 +1461,7 @@ function DashboardPage() {
                                                 columnNumber: 25
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardDescription"], {
+                                                className: "text-muted-foreground font-light",
                                                 children: "Movimientos de lotes y tareas registradas hoy."
                                             }, void 0, false, {
                                                 fileName: "[project]/app/dashboard/page.tsx",
@@ -1480,11 +1482,11 @@ function DashboardPage() {
                                                 className: "w-full text-sm text-left",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("thead", {
-                                                        className: "bg-white text-slate-500 font-medium border-b border-slate-100",
+                                                        className: "bg-[#FDFBF7] text-muted-foreground font-medium border-b border-border",
                                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
-                                                                    className: "px-6 py-4",
+                                                                    className: "px-6 py-4 font-medium tracking-wide",
                                                                     children: "Hora"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/dashboard/page.tsx",
@@ -1492,7 +1494,7 @@ function DashboardPage() {
                                                                     columnNumber: 41
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
-                                                                    className: "px-6 py-4",
+                                                                    className: "px-6 py-4 font-medium tracking-wide",
                                                                     children: "Acción"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/dashboard/page.tsx",
@@ -1500,7 +1502,7 @@ function DashboardPage() {
                                                                     columnNumber: 41
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
-                                                                    className: "px-6 py-4",
+                                                                    className: "px-6 py-4 font-medium tracking-wide",
                                                                     children: "Usuario"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/dashboard/page.tsx",
@@ -1508,7 +1510,7 @@ function DashboardPage() {
                                                                     columnNumber: 41
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
-                                                                    className: "px-6 py-4",
+                                                                    className: "px-6 py-4 font-medium tracking-wide",
                                                                     children: "Detalle"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/dashboard/page.tsx",
@@ -1527,12 +1529,12 @@ function DashboardPage() {
                                                         columnNumber: 33
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
-                                                        className: "divide-y divide-slate-50",
+                                                        className: "divide-y divide-border",
                                                         children: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$constants$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["MOCK_LOGS"].slice(0, 5).map((log)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
-                                                                className: "hover:bg-slate-50/50 transition-colors",
+                                                                className: "hover:bg-sand-gold-50/50 transition-colors bg-card",
                                                                 children: [
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                                                                        className: "px-6 py-4 text-slate-500 font-mono text-xs",
+                                                                        className: "px-6 py-4 text-muted-foreground font-light text-xs",
                                                                         children: log.timestamp
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/dashboard/page.tsx",
@@ -1542,7 +1544,7 @@ function DashboardPage() {
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
                                                                         className: "px-6 py-4",
                                                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                            className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium", log.type === 'move' ? 'bg-blue-50 text-blue-700' : log.type === 'water' ? 'bg-cyan-50 text-cyan-700' : log.type === 'harvest' ? 'bg-amber-50 text-amber-700' : 'bg-slate-100 text-slate-700'),
+                                                                            className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border", log.type === 'move' ? 'bg-sand-gold-50 text-sand-gold-700 border-sand-gold-200' : log.type === 'water' ? 'bg-pastel-green-50 text-pastel-green-700 border-pastel-green-200' : log.type === 'harvest' ? 'bg-orange-50 text-orange-700 border-orange-200' : 'bg-gray-50 text-gray-700 border-gray-200'),
                                                                             children: log.action
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/dashboard/page.tsx",
@@ -1555,7 +1557,7 @@ function DashboardPage() {
                                                                         columnNumber: 45
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                                                                        className: "px-6 py-4 font-medium text-slate-900",
+                                                                        className: "px-6 py-4 font-medium text-foreground",
                                                                         children: log.user
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/dashboard/page.tsx",
@@ -1563,7 +1565,7 @@ function DashboardPage() {
                                                                         columnNumber: 45
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                                                                        className: "px-6 py-4 text-slate-500",
+                                                                        className: "px-6 py-4 text-muted-foreground font-light",
                                                                         children: log.details
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/dashboard/page.tsx",
@@ -1613,19 +1615,20 @@ function DashboardPage() {
                         className: "space-y-6",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Card"], {
-                                className: "bg-gradient-to-br from-emerald-500 to-teal-600 text-white border-none shadow-lg shadow-emerald-500/20",
+                                className: "bg-pastel-green-700 text-white border-none shadow-xl shadow-pastel-green-900/10",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardContent"], {
-                                    className: "p-6",
+                                    className: "p-8",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sprout$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Sprout$3e$__["Sprout"], {
-                                            className: "h-10 w-10 text-emerald-100 mb-4"
+                                            className: "h-12 w-12 text-pastel-green-100 mb-6",
+                                            strokeWidth: 1.5
                                         }, void 0, false, {
                                             fileName: "[project]/app/dashboard/page.tsx",
                                             lineNumber: 281,
                                             columnNumber: 25
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                            className: "text-xl font-bold mb-2",
+                                            className: "text-2xl font-title font-bold mb-2",
                                             children: "Nuevo Cultivo"
                                         }, void 0, false, {
                                             fileName: "[project]/app/dashboard/page.tsx",
@@ -1633,8 +1636,8 @@ function DashboardPage() {
                                             columnNumber: 25
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "text-emerald-100 text-sm mb-6",
-                                            children: "Inicie un nuevo lote de producción o registre esquejes."
+                                            className: "text-pastel-green-100/80 font-light text-sm mb-8 leading-relaxed",
+                                            children: "Inicie un nuevo lote de producción o registre esquejes en su sistema de trazabilidad."
                                         }, void 0, false, {
                                             fileName: "[project]/app/dashboard/page.tsx",
                                             lineNumber: 283,
@@ -1642,9 +1645,18 @@ function DashboardPage() {
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                             onClick: ()=>setIsModalOpen(true),
-                                            className: "w-full bg-white text-emerald-600 font-bold py-3 rounded-xl hover:bg-emerald-50 transition-colors shadow-sm",
-                                            children: "+ Registrar Lote"
-                                        }, void 0, false, {
+                                            className: "w-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-medium py-3.5 rounded-full hover:bg-white/20 transition-all shadow-sm flex items-center justify-center gap-2",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$plus$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Plus$3e$__["Plus"], {
+                                                    size: 18
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/dashboard/page.tsx",
+                                                    lineNumber: 288,
+                                                    columnNumber: 29
+                                                }, this),
+                                                " Registrar Lote"
+                                            ]
+                                        }, void 0, true, {
                                             fileName: "[project]/app/dashboard/page.tsx",
                                             lineNumber: 284,
                                             columnNumber: 25
@@ -1661,11 +1673,12 @@ function DashboardPage() {
                                 columnNumber: 17
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Card"], {
-                                className: "border-slate-100",
+                                className: "border-border shadow-sm",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardHeader"], {
+                                        className: "pb-4",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardTitle"], {
-                                            className: "text-base font-bold flex justify-between items-center",
+                                            className: "text-lg font-title font-medium flex justify-between items-center text-foreground",
                                             children: "Tareas Pendientes"
                                         }, void 0, false, {
                                             fileName: "[project]/app/dashboard/page.tsx",
@@ -1682,23 +1695,23 @@ function DashboardPage() {
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
                                                 onSubmit: addTask,
-                                                className: "flex gap-2 mb-4",
+                                                className: "flex gap-2 mb-2",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
                                                         placeholder: "Nueva tarea...",
                                                         value: newTask,
                                                         onChange: (e)=>setNewTask(e.target.value),
-                                                        className: "h-8 text-sm"
+                                                        className: "h-10 text-sm bg-sand-gold-50/50"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/dashboard/page.tsx",
                                                         lineNumber: 301,
                                                         columnNumber: 29
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
-                                                        size: "sm",
+                                                        size: "icon",
                                                         type: "submit",
-                                                        variant: "ghost",
-                                                        className: "h-8 w-8 p-0",
+                                                        variant: "secondary",
+                                                        className: "h-10 w-10 flex-shrink-0",
                                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$plus$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Plus$3e$__["Plus"], {
                                                             size: 16
                                                         }, void 0, false, {
@@ -1718,12 +1731,12 @@ function DashboardPage() {
                                                 columnNumber: 25
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "space-y-2",
+                                                className: "space-y-3",
                                                 children: tasks.map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "flex items-center gap-3 p-3 rounded-xl bg-slate-50 border border-slate-100 group",
+                                                        className: "flex items-center gap-3 p-3.5 rounded-2xl bg-card border border-border group hover:border-pastel-green-200 transition-colors",
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("w-2 h-2 rounded-full flex-shrink-0", item.urgent ? "bg-red-500 animate-pulse" : "bg-emerald-400")
+                                                                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("w-2 h-2 rounded-full flex-shrink-0", item.urgent ? "bg-red-400 animate-pulse" : "bg-pastel-green-400")
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/dashboard/page.tsx",
                                                                 lineNumber: 315,
@@ -1733,7 +1746,7 @@ function DashboardPage() {
                                                                 className: "flex-1 min-w-0",
                                                                 children: [
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                        className: "text-sm font-bold text-slate-700 truncate",
+                                                                        className: "text-sm font-medium text-foreground truncate",
                                                                         children: item.task
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/dashboard/page.tsx",
@@ -1741,7 +1754,7 @@ function DashboardPage() {
                                                                         columnNumber: 37
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                        className: "text-xs text-slate-400",
+                                                                        className: "text-xs text-muted-foreground mt-0.5",
                                                                         children: item.time
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/dashboard/page.tsx",
@@ -1758,7 +1771,7 @@ function DashboardPage() {
                                                                 onClick: ()=>removeTask(item.id),
                                                                 variant: "ghost",
                                                                 size: "icon",
-                                                                className: "h-6 w-6 text-slate-400 hover:text-red-500 opacity-0 group-hover:opacity-100 transition-opacity",
+                                                                className: "h-8 w-8 text-muted-foreground hover:bg-red-50 hover:text-red-500 opacity-0 group-hover:opacity-100 transition-all rounded-full",
                                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trash$2d$2$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Trash2$3e$__["Trash2"], {
                                                                     size: 14
                                                                 }, void 0, false, {

@@ -45,7 +45,7 @@ export function Dropdown({ trigger, children, align = 'right', direction = 'down
                         exit={{ opacity: 0, y: direction === 'up' ? 10 : -10, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
                         className={cn(
-                            "absolute z-50 min-w-[220px] bg-white rounded-xl shadow-xl border border-slate-100 py-2 overflow-hidden",
+                            "absolute z-50 min-w-[220px] bg-card rounded-2xl shadow-xl shadow-sand-gold-900/5 border border-border/50 py-2 overflow-hidden",
                             align === 'right' ? 'right-0' : 'left-0',
                             direction === 'up' ? 'bottom-full mb-2' : 'mt-2',
                             className
@@ -67,7 +67,7 @@ export function DropdownItem({ children, onClick, className, destructive = false
                 "w-full text-left px-4 py-2.5 text-sm font-medium transition-colors flex items-center gap-2",
                 destructive 
                     ? "text-red-600 hover:bg-red-50" 
-                    : "text-slate-700 hover:bg-slate-50 hover:text-emerald-700",
+                    : "text-muted-foreground hover:bg-sand-gold-50/50 hover:text-foreground",
                 className
             )}
         >
@@ -76,6 +76,6 @@ export function DropdownItem({ children, onClick, className, destructive = false
     );
 }
 
-export function DropdownSeparator() {
-    return <div className="h-px bg-slate-100 my-1" />;
+export function DropdownSeparator({ className }: { className?: string }) {
+    return <div className={cn("h-px bg-border/50 my-1", className)} />;
 }

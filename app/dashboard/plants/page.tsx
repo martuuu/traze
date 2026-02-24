@@ -57,26 +57,26 @@ export default function PlantsPage() {
             {/* Header */}
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                  <div>
-                     <h1 className="text-3xl font-black text-slate-900 tracking-tight">Inventario de Plantas</h1>
-                     <p className="text-slate-500">Listado maestro de todos los individuos vegetales activos.</p>
+                     <h1 className="text-3xl font-black text-foreground font-title tracking-tight">Inventario de Plantas</h1>
+                     <p className="text-muted-foreground font-light">Listado maestro de todos los individuos vegetales activos.</p>
                  </div>
                  <Button 
                     onClick={() => setIsCreateOpen(true)}
-                    className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold shadow-lg shadow-emerald-500/20"
+                    className="bg-pastel-green-600 hover:bg-pastel-green-700 text-white font-bold shadow-lg shadow-pastel-green-500/20"
                 >
                     <Plus className="mr-2 h-4 w-4" /> Registrar Planta
                 </Button>
             </div>
 
             {/* Controls */}
-            <Card className="border-slate-100 shadow-sm sticky top-4 z-20">
+            <Card className="border-border shadow-sm sticky top-4 z-20">
                 <CardContent className="p-4 flex flex-col lg:flex-row gap-4 justify-between items-center">
                     <div className="flex gap-2 w-full lg:w-auto">
                         <div className="relative flex-1 lg:w-96">
-                            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 h-4 w-4" />
+                            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground font-light h-4 w-4" />
                             <Input 
                                 placeholder="Buscar por Tag, Genética..." 
-                                className="pl-10 bg-slate-50 border-slate-200"
+                                className="pl-10 bg-card border-border"
                                 value={searchTerm}
                                 onChange={(e) => setSearchTerm(e.target.value)}
                             />
@@ -85,13 +85,13 @@ export default function PlantsPage() {
                     
                     {/* Filter Pills */}
                     <div className="flex gap-2 overflow-x-auto w-full lg:w-auto no-scrollbar">
-                         <Button variant="outline" size="sm" className="bg-slate-50 border-slate-200 text-slate-600 whitespace-nowrap">
+                         <Button variant="outline" size="sm" className="bg-card border-border text-muted-foreground whitespace-nowrap">
                             <Filter className="mr-2 h-3 w-3" /> Estado
                         </Button>
-                        <Button variant="outline" size="sm" className="bg-slate-50 border-slate-200 text-slate-600 whitespace-nowrap">
+                        <Button variant="outline" size="sm" className="bg-card border-border text-muted-foreground whitespace-nowrap">
                             <Sprout className="mr-2 h-3 w-3" /> Genética
                         </Button>
-                         <Button variant="outline" size="sm" className="bg-slate-50 border-slate-200 text-slate-600 whitespace-nowrap">
+                         <Button variant="outline" size="sm" className="bg-card border-border text-muted-foreground whitespace-nowrap">
                             <AlertCircle className="mr-2 h-3 w-3" /> Salud Profile
                         </Button>
                     </div>
@@ -99,12 +99,12 @@ export default function PlantsPage() {
             </Card>
 
             {/* Table */}
-            <Card className="border-slate-100 shadow-sm overflow-hidden">
+            <Card className="border-border shadow-sm overflow-hidden">
                 <div className="overflow-x-auto">
                     <table className="w-full text-sm text-left">
-                        <thead className="text-xs text-slate-500 uppercase bg-slate-50 font-bold border-b border-slate-100">
+                        <thead className="text-xs text-muted-foreground font-light uppercase bg-card font-bold border-b border-border">
                             <tr>
-                                <th className="px-6 py-4 cursor-pointer hover:bg-slate-100 transition-colors">TAG ID <ArrowUpDown size={12} className="inline ml-1" /></th>
+                                <th className="px-6 py-4 cursor-pointer hover:bg-sand-gold-50 transition-colors">TAG ID <ArrowUpDown size={12} className="inline ml-1" /></th>
                                 <th className="px-6 py-4">Genética</th>
                                 <th className="px-6 py-4">Estado</th>
                                 <th className="px-6 py-4">Ubicación</th>
@@ -115,30 +115,30 @@ export default function PlantsPage() {
                         </thead>
                         <tbody className="divide-y divide-slate-50 bg-white">
                             {displayedPlants.map((plant) => (
-                                <tr key={plant.id} className="hover:bg-slate-50/80 transition-colors group">
-                                    <td className="px-6 py-4 font-mono font-bold text-slate-900 group-hover:text-emerald-600 transition-colors">
+                                <tr key={plant.id} className="hover:bg-card transition-colors group">
+                                    <td className="px-6 py-4 font-mono font-bold text-foreground font-title group-hover:text-pastel-green-600 transition-colors">
                                         <Link href={`/dashboard/plants/${plant.id}`} className="hover:underline">
                                             {plant.tag}
                                         </Link>
                                     </td>
-                                    <td className="px-6 py-4 font-bold text-slate-700">{plant.strain}</td>
+                                    <td className="px-6 py-4 font-bold text-foreground font-medium">{plant.strain}</td>
                                     <td className="px-6 py-4">
                                         <div className="flex items-center gap-2">
                                             <div className={cn("h-2 w-2 rounded-full", plantStageColors[plant.stage])} />
-                                            <span className="capitalize text-slate-600 font-medium">{plant.stage}</span>
+                                            <span className="capitalize text-muted-foreground font-medium">{plant.stage}</span>
                                         </div>
                                     </td>
-                                    <td className="px-6 py-4 text-slate-500">{plant.location}</td>
+                                    <td className="px-6 py-4 text-muted-foreground font-light">{plant.location}</td>
                                     <td className="px-6 py-4">
                                         {plant.patient === 'Sin Asignar' ? (
-                                            <Badge variant="outline" className="text-slate-400 border-slate-200 font-normal">Sin Asignar</Badge>
+                                            <Badge variant="outline" className="text-muted-foreground font-light border-border font-normal">Sin Asignar</Badge>
                                         ) : (
-                                            <span className="text-emerald-600 font-bold text-xs bg-emerald-50 px-2 py-1 rounded-md">{plant.patient}</span>
+                                            <span className="text-pastel-green-600 font-bold text-xs bg-pastel-green-50 px-2 py-1 rounded-md">{plant.patient}</span>
                                         )}
                                     </td>
                                     <td className="px-6 py-4">
                                         {plant.health === 'healthy' ? (
-                                            <span className="text-emerald-600 font-bold text-[10px] uppercase bg-emerald-50 px-2 py-1 rounded-full border border-emerald-100">Saludable</span>
+                                            <span className="text-pastel-green-600 font-bold text-[10px] uppercase bg-pastel-green-50 px-2 py-1 rounded-full border border-pastel-green-100">Saludable</span>
                                         ) : (
                                             <span className="text-red-500 font-bold text-[10px] uppercase bg-red-50 px-2 py-1 rounded-full border border-red-100 flex items-center w-fit gap-1">
                                                 <AlertCircle size={10} /> Revisar
@@ -148,7 +148,7 @@ export default function PlantsPage() {
                                     <td className="px-6 py-4 text-right">
                                         <Dropdown 
                                             trigger={
-                                                <Button variant="ghost" size="icon" className="h-8 w-8 text-slate-400 hover:text-slate-600">
+                                                <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground font-light hover:text-muted-foreground">
                                                     <MoreHorizontal size={16} />
                                                 </Button>
                                             }
@@ -168,8 +168,8 @@ export default function PlantsPage() {
                 </div>
                 
                 {/* Pagination */}
-                <div className="bg-slate-50 border-t border-slate-100 p-4 flex items-center justify-between">
-                    <p className="text-sm text-slate-500">Mostrando <span className="font-bold text-slate-900">{displayedPlants.length}</span> de <span className="font-bold text-slate-900">{filteredPlants.length}</span> plantas</p>
+                <div className="bg-card border-t border-border p-4 flex items-center justify-between">
+                    <p className="text-sm text-muted-foreground font-light">Mostrando <span className="font-bold text-foreground font-title">{displayedPlants.length}</span> de <span className="font-bold text-foreground font-title">{filteredPlants.length}</span> plantas</p>
                     <div className="flex gap-2">
                         {/* ... Pagination buttons ... */}
                         <Button 
@@ -181,7 +181,7 @@ export default function PlantsPage() {
                         >
                             <ChevronLeft size={16} />
                         </Button>
-                         <div className="flex items-center justify-center px-3 text-sm font-bold text-slate-700 bg-white border border-slate-200 rounded-md">
+                         <div className="flex items-center justify-center px-3 text-sm font-bold text-foreground font-medium bg-white border border-border rounded-md">
                             {currentPage}
                         </div>
                         <Button 
@@ -206,7 +206,7 @@ export default function PlantsPage() {
             >
                 <div className="space-y-4">
                     <div className="space-y-2">
-                        <label className="text-sm font-bold text-slate-700 block">Genética / Variedad</label>
+                        <label className="text-sm font-bold text-foreground font-medium block">Genética / Variedad</label>
                         <Input 
                             placeholder="Ej. Gelato #33" 
                             value={newPlant.strain}
@@ -214,7 +214,7 @@ export default function PlantsPage() {
                         />
                     </div>
                      <div className="space-y-2">
-                        <label className="text-sm font-bold text-slate-700 block">Ubicación</label>
+                        <label className="text-sm font-bold text-foreground font-medium block">Ubicación</label>
                          <Input 
                             placeholder="Ej. Sala B - Cama 1" 
                             value={newPlant.location}
@@ -222,7 +222,7 @@ export default function PlantsPage() {
                         />
                     </div>
                      <div className="space-y-2">
-                        <label className="text-sm font-bold text-slate-700 block">Asignar a Paciente (Opcional)</label>
+                        <label className="text-sm font-bold text-foreground font-medium block">Asignar a Paciente (Opcional)</label>
                         <Input 
                             placeholder="Buscar paciente..."
                             value={newPlant.patient}
@@ -231,7 +231,7 @@ export default function PlantsPage() {
                     </div>
                     <Button 
                         onClick={handleCreate} 
-                        className="w-full bg-emerald-600 hover:bg-emerald-700 font-bold"
+                        className="w-full bg-pastel-green-600 hover:bg-pastel-green-700 font-bold"
                         disabled={!newPlant.strain.trim()}
                     >
                         <Sprout className="mr-2 h-4 w-4" /> Registrar e Imprimir QR

@@ -46,19 +46,36 @@ const config: Config = {
           foreground: "hsl(var(--card-foreground))",
         },
         // Traze Custom Palette
-        emerald: {
-            50: '#ecfdf5',
-            100: '#d1fae5',
-            200: '#a7f3d0',
-            300: '#6ee7b7',
-            400: '#34d399',
-            500: '#10b981', // Key Brand Color
-            600: '#059669',
-            700: '#047857',
-            800: '#065f46',
-            900: '#064e3b',
-            950: '#022c22',
+        "pastel-green": {
+            50: '#f2f8f5',
+            100: '#e1efe7',
+            200: '#c5e0d2',
+            300: '#9bc8b6',
+            400: '#6ca891',
+            500: '#4d8c75', // Key Brand
+            600: '#3c705e',
+            700: '#32594d',
+            800: '#2b483f',
+            900: '#253d36',
+            950: '#12221e',
         },
+        "sand-gold": {
+            50: '#fdfbfa',
+            100: '#f9f5e9',
+            200: '#f2e7cd',
+            300: '#e8d5a7', 
+            400: '#ddbf7b',
+            500: '#d3aa58',
+            600: '#c29143',
+            700: '#a27133',
+            800: '#845b2f',
+            900: '#704c2a',
+            950: '#402814',
+        },
+      },
+      fontFamily: {
+        sans: ["var(--font-inter)", "sans-serif"],
+        title: ["var(--font-outfit)", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
