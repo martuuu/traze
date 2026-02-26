@@ -4,6 +4,8 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from '@/app/components/ui/button';
 import { FileText, Download, Printer, QrCode, CheckCircle2 } from 'lucide-react';
 import { Badge } from '@/app/components/ui/badge';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, Legend, ResponsiveContainer } from 'recharts';
+import { yearlyStatsData } from '@/app/data/mock-db';
 
 export default function ReportsPage() {
     return (
@@ -13,7 +15,34 @@ export default function ReportsPage() {
                  <p className="text-muted-foreground font-light">Generación de documentación oficial y etiquetas</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Yearly Stats Chart */}
+            <Card className="border-border">
+                <CardHeader>
+                    <CardTitle className="text-xl font-bold font-title">Resumen Anual de Producción</CardTitle>
+                    <CardDescription>Métricas de semillas, cultivo, cosecha y extracción a lo largo del año.</CardDescription>
+                </CardHeader>
+                <CardContent>
+                    <div className="h-[400px] w-full">
+                        <ResponsiveContainer width="100%" height="100%">
+                            <BarChart data={yearlyStatsData} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
+                                <CartesianGrid strokeDasharray="3 3" opacity={0.2} />
+                                <XAxis dataKey="name" fontSize={12} tickLine={false} axisLine={false} />
+                                <YAxis fontSize={12} tickLine={false} axisLine={false} />
+                                <RechartsTooltip 
+                                    contentStyle={{ borderRadius: '12px', border: '1px solid #e2e8f0', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}
+                                />
+                                <Legend wrapperStyle={{ paddingTop: '20px' }} />
+                                <Bar dataKey="seeds" name="Semillas (Stock)" fill="#94a3b8" radius={[4, 4, 0, 0]} />
+                                <Bar dataKey="cultivated" name="Planta Cultivada" fill="#22c55e" radius={[4, 4, 0, 0]} />
+                                <Bar dataKey="harvested" name="Cosechado (g)" fill="#f59e0b" radius={[4, 4, 0, 0]} />
+                                <Bar dataKey="extracted" name="Extracción Aceite (ml)" fill="#3b82f6" radius={[4, 4, 0, 0]} />
+                            </BarChart>
+                        </ResponsiveContainer>
+                    </div>
+                </CardContent>
+            </Card>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
                 {/* Reports Generation */}
                 <div className="space-y-6">
                     <h2 className="text-xl font-bold text-foreground font-title">Oficiales (Ministerio de Salud)</h2>

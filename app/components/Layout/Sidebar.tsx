@@ -27,10 +27,10 @@ import { Logo } from '@/app/components/ui/logo';
 
 const NAV_ITEMS = [
   { icon: LayoutDashboard, label: 'Panel Principal', path: '/dashboard' },
+  { icon: Sprout, label: 'Genética', path: '/dashboard/seeds' },
+  { icon: Layers, label: 'Lotes e Inventario', path: '/dashboard/lots' },
+  { icon: ClipboardList, label: 'Asignaciones', path: '/dashboard/assignments' },
   { icon: Users, label: 'Pacientes', path: '/dashboard/patients' },
-  { icon: Layers, label: 'Lotes / Cultivos', path: '/dashboard/lotes' },
-  { icon: Sprout, label: 'Plantas', path: '/dashboard/plants' },
-  { icon: ClipboardList, label: 'Trazabilidad', path: '/dashboard/traceability' },
   { icon: FileText, label: 'Reportes', path: '/dashboard/reports' },
   { icon: Bot, label: 'Innovación AI', path: '/dashboard/innovation' },
   { icon: QrCode, label: 'Scanner', path: '/dashboard/scanner' },

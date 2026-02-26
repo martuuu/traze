@@ -21,6 +21,7 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { DashboardShowcase } from '@/app/components/Marketing/DashboardShowcase';
 
 export default function Home() {
   return (
@@ -78,26 +79,6 @@ export default function Home() {
                         </Link>
                     </div>
                 </div>
-
-                {/* Dashboard Mockup - Right Side */}
-                <div className="lg:w-1/2 mt-20 lg:mt-0 w-full max-w-2xl mx-auto animate-in fade-in slide-in-from-bottom-16 duration-1000 delay-500 perspective-1000 relative z-10">
-                     <div className="rounded-[2.5rem] overflow-hidden bg-card border border-border/50 shadow-2xl shadow-sand-gold-900/5 ring-1 ring-black/5 transform rotate-x-2 transition-all hover:rotate-0 duration-700 backdrop-blur-xl bg-white/40">
-                        <div className="flex items-center gap-2 px-6 py-4 bg-white/50 border-b border-border/50">
-                            <div className="flex gap-2">
-                                <div className="w-3 h-3 rounded-full bg-sand-gold-300"></div>
-                                <div className="w-3 h-3 rounded-full bg-sand-gold-300"></div>
-                                <div className="w-3 h-3 rounded-full bg-pastel-green-300"></div>
-                            </div>
-                            <div className="text-xs text-muted-foreground font-medium ml-4 tracking-wider uppercase">dashboard.traze.app</div>
-                        </div>
-                        <div className="aspect-[4/3] bg-white/60 relative flex items-center justify-center backdrop-blur-sm">
-                             <div className="absolute inset-0 flex flex-col items-center justify-center text-muted-foreground p-8">
-                                <Cpu size={48} strokeWidth={1} className="mb-4 text-pastel-green-400" />
-                                <span className="font-light text-xl tracking-wide text-center">Interactive Dashboard Preview</span>
-                            </div>
-                        </div>
-                     </div>
-                </div>
             </div>
         </section>
 
@@ -151,6 +132,9 @@ export default function Home() {
                 </BentoGrid>
             </div>
         </section>
+
+        {/* INTERACTIVE DASHBOARD SHOWCASE */}
+        <DashboardShowcase />
 
         {/* ORGANIC PATIENT SECTION - Replacing the dark slate with deeper organic tones */}
         <section id="pacientes" className="py-32 bg-[#1A231E] relative overflow-hidden text-sand-gold-50">

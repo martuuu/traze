@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/app
 import { Users, Sprout, AlertTriangle, TrendingUp, DollarSign, Activity, Calendar, Plus, Trash2 } from 'lucide-react';
 import { MOCK_ORG, MOCK_LOGS } from '@/app/lib/constants';
 import { cn } from '@/app/lib/utils';
+import { patients, plants, lots } from '@/app/data/mock-db';
 import { GlassCard } from '@/app/components/ui/glass-card';
 import { Dialog } from '@/app/components/ui/custom-dialog';
 import { Button } from '@/app/components/ui/button';
@@ -64,7 +65,16 @@ export default function DashboardPage() {
   ]);
   const [newTask, setNewTask] = useState('');
 
-  const patientPercentage = Math.round((MOCK_ORG.currentPatients / MOCK_ORG.maxPatients) * 100);
+  const activePatientsCount = patients.filter(p => p.status === 'ACTIVE').length;
+  const maxPatients = 150; // Res 3132/24 limit
+  const patientPercentage = Math.round((activePatientsCount / maxPatients) * 100);
+  
+  const floweringPlantsCount = plants.filter(p => p.currentStage === 'FLOWERING').length;
+  const maxPlants = maxPatients * 9;
+  const plantPercentage = Math.round((floweringPlantsCount / maxPlants) * 100) || 5;
+
+  const complianceAlerts = patients.filter(p => p.assignedPlantsCount >= 9).length;
+  const activeLots = lots.filter(l => l.status === 'ACTIVE').length;
 
   const addTask = (e: React.FormEvent) => {
       e.preventDefault();
@@ -145,27 +155,27 @@ export default function DashboardPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <StatCard 
                 title="Pacientes Activos" 
-                value={MOCK_ORG.currentPatients.toString()} 
+                value={activePatientsCount.toString()} 
                 icon={Users} 
-                trend="+12% este mes"
+                trend={`Límite Legal: ${maxPatients}`}
                 color="blue"
             />
             <StatCard 
                 title="Plantas en Floración" 
-                value="342" 
+                value={floweringPlantsCount.toString()} 
                 icon={Sprout} 
-                trend="Capacidad al 85%"
+                trend="Monitorizado"
                 color="emerald"
             />
             <StatCard 
                 title="Alertas de Compliance" 
-                value="0" 
+                value={complianceAlerts.toString()} 
                 icon={AlertTriangle} 
-                color="amber"
+                color={complianceAlerts > 0 ? "amber" : "emerald"}
             />
              <StatCard 
-                title="Cosecha Estimada" 
-                value="24.5 kg" 
+                title="Lotes Activos" 
+                value={activeLots.toString()} 
                 icon={Activity} 
                 color="purple"
             />
@@ -197,21 +207,21 @@ export default function DashboardPage() {
                                 <div className="h-full bg-blue-400/80 rounded-full transition-all duration-1000" style={{ width: `${patientPercentage}%` }}></div>
                             </div>
                             <div className="text-xs text-[#A2B1A8] font-light">
-                                {MOCK_ORG.currentPatients} / {MOCK_ORG.maxPatients} Autorizados
+                                {activePatientsCount} / {maxPatients} Autorizados
                             </div>
                         </div>
 
                          {/* Meter 2: Flowering Plants */}
                          <div className="bg-[#242F29]/60 rounded-2xl p-5 border border-white/5 shadow-inner">
                             <div className="flex justify-between items-center mb-3">
-                                <span className="text-sm font-medium text-sand-gold-100">Plantas Floración</span>
-                                <span className="text-xs font-medium text-pastel-green-300">85%</span>
+                                <span className="text-sm font-medium text-sand-gold-100">Cupo Floración Global</span>
+                                <span className="text-xs font-medium text-pastel-green-300">{plantPercentage}%</span>
                             </div>
                              <div className="h-2 w-full bg-[#1A231F] rounded-full overflow-hidden mb-3">
-                                <div className="h-full bg-pastel-green-500/80 rounded-full w-[85%]"></div>
+                                <div className="h-full bg-pastel-green-500/80 rounded-full transition-all duration-1000" style={{ width: `${plantPercentage}%` }}></div>
                             </div>
                             <div className="text-xs text-[#A2B1A8] font-light">
-                                Limitado por m² de sala
+                                Máximo legal: {maxPlants}
                             </div>
                         </div>
 
@@ -234,7 +244,7 @@ export default function DashboardPage() {
                 {/* Recent Activity Table using standard Card */}
                 <Card className="overflow-hidden">
                     <CardHeader className="bg-card border-b border-border">
-                        <CardTitle className="text-xl font-title font-medium text-foreground">Actividad Reciente en Sala</CardTitle>
+                        <CardTitle className="text-xl font-title font-medium text-foreground">Actividad Reciente</CardTitle>
                         <CardDescription className="text-muted-foreground font-light">Movimientos de lotes y tareas registradas hoy.</CardDescription>
                     </CardHeader>
                     <CardContent className="p-0">
@@ -249,7 +259,7 @@ export default function DashboardPage() {
                                     </tr>
                                 </thead>
                                 <tbody className="divide-y divide-border">
-                                    {MOCK_LOGS.slice(0, 5).map((log) => (
+                                    {MOCK_LOGS.slice(0, 10).map((log) => (
                                         <tr key={log.id} className="hover:bg-sand-gold-50/50 transition-colors bg-card">
                                             <td className="px-6 py-4 text-muted-foreground font-light text-xs">{log.timestamp}</td>
                                             <td className="px-6 py-4">

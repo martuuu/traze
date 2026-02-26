@@ -12,9 +12,14 @@ export const MOCK_ORG: Organization = {
 export const MOCK_LOGS: TraceLog[] = [
     { id: '1', timestamp: '10:02', action: 'Cambio de Sala', details: 'Lote B-04 movido a Floración', user: 'Op. Carlos', type: 'move' },
     { id: '2', timestamp: '09:15', action: 'Riego', details: 'Riego con Nutrientes (Veg) Sala A', user: 'Op. Maria', type: 'water' },
-    { id: '3', timestamp: 'Yesterday', action: 'Esquejado', details: 'Creación de 50 clones Lemon Haze', user: 'Ing. Juan', type: 'cut' },
-    { id: '4', timestamp: 'Yesterday', action: 'Descarte', details: 'Planta #9921 por Plaga (Araña Roja)', user: 'Ing. Juan', type: 'destroy' },
-    { id: '5', timestamp: '2 days ago', action: 'Cosecha', details: 'Lote C-11 (12.5kg húmedo)', user: 'Op. Carlos', type: 'harvest' },
+    { id: '3', timestamp: '08:30', action: 'Control Plagas', details: 'Aplicación preventiva Neem Lote C-11', user: 'Ing. Juan', type: 'water' },
+    { id: '4', timestamp: 'Ayer', action: 'Esquejado', details: 'Creación de 50 clones Lemon Haze', user: 'Ing. Juan', type: 'cut' },
+    { id: '5', timestamp: 'Ayer', action: 'Descarte', details: 'Planta #9921 por Plaga (Araña Roja)', user: 'Ing. Juan', type: 'destroy' },
+    { id: '6', timestamp: 'Hace 2 días', action: 'Cosecha', details: 'Lote C-11 (12.5kg húmedo)', user: 'Op. Carlos', type: 'harvest' },
+    { id: '7', timestamp: 'Hace 2 días', action: 'Asignación', details: 'Planta #882 asignada a Paciente P-102', user: 'Admin', type: 'move' },
+    { id: '8', timestamp: 'Hace 3 días', action: 'Control Calidad', details: 'Test de humedad en sala de secado', user: 'Op. Maria', type: 'water' },
+    { id: '9', timestamp: 'Hace 4 días', action: 'Poda', details: 'Poda de bajos Lote B-04', user: 'Op. Carlos', type: 'cut' },
+    { id: '10', timestamp: 'Hace 5 días', action: 'Ingreso', details: 'Recepción 1500 semillas Blue Dream', user: 'Admin', type: 'move' },
 ];
 
 export const MOCK_LOTES = [

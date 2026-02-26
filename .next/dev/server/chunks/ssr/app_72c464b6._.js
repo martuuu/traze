@@ -405,27 +405,67 @@ const MOCK_LOGS = [
     },
     {
         id: '3',
-        timestamp: 'Yesterday',
+        timestamp: '08:30',
+        action: 'Control Plagas',
+        details: 'Aplicación preventiva Neem Lote C-11',
+        user: 'Ing. Juan',
+        type: 'water'
+    },
+    {
+        id: '4',
+        timestamp: 'Ayer',
         action: 'Esquejado',
         details: 'Creación de 50 clones Lemon Haze',
         user: 'Ing. Juan',
         type: 'cut'
     },
     {
-        id: '4',
-        timestamp: 'Yesterday',
+        id: '5',
+        timestamp: 'Ayer',
         action: 'Descarte',
         details: 'Planta #9921 por Plaga (Araña Roja)',
         user: 'Ing. Juan',
         type: 'destroy'
     },
     {
-        id: '5',
-        timestamp: '2 days ago',
+        id: '6',
+        timestamp: 'Hace 2 días',
         action: 'Cosecha',
         details: 'Lote C-11 (12.5kg húmedo)',
         user: 'Op. Carlos',
         type: 'harvest'
+    },
+    {
+        id: '7',
+        timestamp: 'Hace 2 días',
+        action: 'Asignación',
+        details: 'Planta #882 asignada a Paciente P-102',
+        user: 'Admin',
+        type: 'move'
+    },
+    {
+        id: '8',
+        timestamp: 'Hace 3 días',
+        action: 'Control Calidad',
+        details: 'Test de humedad en sala de secado',
+        user: 'Op. Maria',
+        type: 'water'
+    },
+    {
+        id: '9',
+        timestamp: 'Hace 4 días',
+        action: 'Poda',
+        details: 'Poda de bajos Lote B-04',
+        user: 'Op. Carlos',
+        type: 'cut'
+    },
+    {
+        id: '10',
+        timestamp: 'Hace 5 días',
+        action: 'Ingreso',
+        details: 'Recepción 1500 semillas Blue Dream',
+        user: 'Admin',
+        type: 'move'
     }
 ];
 const MOCK_LOTES = [

@@ -1,5 +1,13 @@
 {
   "app": {
+    "[project]/app/_not-found/page": [
+      "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
+      "static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2"
+    ],
+    "[project]/app/dashboard/assignments/page": [
+      "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
+      "static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2"
+    ],
     "[project]/app/dashboard/innovation/page": [
       "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
       "static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2"
@@ -8,23 +16,15 @@
       "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
       "static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2"
     ],
+    "[project]/app/dashboard/lots/page": [
+      "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
+      "static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2"
+    ],
     "[project]/app/dashboard/page": [
       "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
       "static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2"
     ],
-    "[project]/app/dashboard/patients/[id]/page": [
-      "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
-      "static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2"
-    ],
     "[project]/app/dashboard/patients/page": [
-      "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
-      "static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2"
-    ],
-    "[project]/app/dashboard/plants/[id]/page": [
-      "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
-      "static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2"
-    ],
-    "[project]/app/dashboard/plants/page": [
       "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
       "static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2"
     ],
@@ -36,7 +36,7 @@
       "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
       "static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2"
     ],
-    "[project]/app/dashboard/traceability/page": [
+    "[project]/app/dashboard/seeds/page": [
       "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
       "static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2"
     ],
